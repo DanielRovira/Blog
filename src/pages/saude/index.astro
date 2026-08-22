@@ -1,0 +1,26 @@
+---
+// Importamos o layout e a função para ler as coleções
+import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
+import { getCollection } from 'astro:content';
+
+// Puxamos todas as receitas salvas na nossa pasta content/saude
+const todasAsReceitas = await getCollection('saude');
+---
+
+<LayoutDinamico nicho="saude" title="Receitas Saudáveis">
+  <h1>Receitas para sua Rotina</h1>
+  <p>Escolha uma das nossas opções rápidas e saudáveis abaixo:</p>
+  
+  <ul>
+    {/* O map vai varrer nossos arquivos Markdown e criar um link para cada um automaticamente */}
+    {todasAsReceitas.map((receita) => (
+      <li style="margin-bottom: 10px;">
+        <a href={`/saude/receitas/${receita.id}`} style="text-decoration: none; color: #10b981; font-weight: bold;">
+          {receita.data.titulo}
+        </a>
+        <br />
+        <small style="color: #666;">{receita.data.descricao}</small>
+      </li>
+    ))}
+  </ul>
+</LayoutDinamico>

@@ -1,0 +1,42 @@
+---
+import { configNichos } from '../config/nichos.js';
+
+// 1. Criamos a interface definindo os tipos exatos esperados
+export interface Props {
+  title: string;
+  // 'keyof typeof' diz ao TypeScript que 'nicho' só pode ser uma das chaves que existem lá no nichos.js
+  nicho?: keyof typeof configNichos; 
+}
+
+// 2. O Astro automaticamente aplica a interface Props aqui
+const { nicho = 'default', title } = Astro.props;
+
+// 3. Agora o TypeScript sabe exatamente o que é 'dadosNicho', e o erro some
+const dadosNicho = configNichos[nicho];
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title} | {dadosNicho.nome}</title>
+  </head>
+  <body>
+    <header style={`background-color: ${dadosNicho.cor}; padding: 1rem; color: white;`}>
+      <nav style="display: flex; gap: 1rem; align-items: center;">
+        <strong>{dadosNicho.nome}</strong>
+        
+        {/* Como o TypeScript agora entende a estrutura, o erro do 'link' também some automaticamente */}
+        {dadosNicho.links.map((link) => (
+          <a href={link.url} style="color: white; text-decoration: none;">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </header>
+
+    <main style="padding: 2rem;">
+      <slot /> 
+    </main>
+
+  </body>
+</html>

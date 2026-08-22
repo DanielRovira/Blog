@@ -1,0 +1,34 @@
+---
+// 1. No Astro 5, importamos a função 'render' diretamente do astro:content
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
+
+export async function getStaticPaths() {
+  const artigosSaude = await getCollection('saude');
+  
+  return artigosSaude.map(artigo => ({
+    // 2. Mudamos de artigo.slug para artigo.id
+    params: { slug: artigo.id },
+    props: { artigo },
+  }));
+}
+
+export interface Props {
+  artigo: CollectionEntry<'saude'>;
+}
+
+const { artigo } = Astro.props;
+
+// 3. A renderização agora é feita passando o artigo para a função render()
+const { Content } = await render(artigo);
+---
+
+<LayoutDinamico nicho="saude" title={artigo.data.titulo}>
+  <h2>{artigo.data.titulo}</h2>
+  <p>{artigo.data.descricao}</p>
+  
+  <Content /> 
+  
+  <br/>
+  <a href="/saude/receitas">← Voltar</a>
+</LayoutDinamico>

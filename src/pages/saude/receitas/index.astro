@@ -1,0 +1,14 @@
+---
+import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
+import { getCollection } from 'astro:content';
+
+const todasAsReceitas = await getCollection('saude');
+---
+<LayoutDinamico nicho="saude" title="Receitas">
+  <h1>Lista de Receitas</h1>
+  <ul>
+    {todasAsReceitas.map((receita) => (
+      <li><a href={`/saude/receitas/${receita.id}`}>{receita.data.titulo}</a></li>
+    ))}
+  </ul>
+</LayoutDinamico>
