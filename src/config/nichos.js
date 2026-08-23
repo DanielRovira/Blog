@@ -13,7 +13,7 @@ export const configNichos = {
     links: [
       { label: "Home", url: "/saude" },
       { label: "Receitas", url: "/saude/receitas" },
-      { label: "Ferramentas", url: "/saude/ferramentas" }
+    //   { label: "Ferramentas", url: "/saude/ferramentas" }
     ]
   },
   viagens: {
@@ -22,7 +22,7 @@ export const configNichos = {
     links: [
       { label: "Home", url: "/viagens" },
       { label: "Roteiros", url: "/viagens/roteiros" },
-      { label: "Checklist", url: "/viagens/checklist" }
+    //   { label: "Checklist", url: "/viagens/checklist" }
     ]
   }
 };

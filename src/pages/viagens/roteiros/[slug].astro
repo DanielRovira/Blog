@@ -19,19 +19,22 @@ const { artigo } = Astro.props;
 const { Content } = await render(artigo);
 ---
 
-<LayoutDinamico nicho="viagens" title={artigo.data.titulo}>
-  <h2>{artigo.data.titulo}</h2>
-  {artigo.data.destino && <p><strong>Destino:</strong> {artigo.data.destino}</p>}
-  <p><em>{artigo.data.descricao}</em></p>
+<LayoutDinamico nicho="viagens" title={artigo.data.titulo} description={artigo.data.descricao}>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="margin-bottom: 0.5rem;">{artigo.data.titulo}</h1>
+    <p style="color: rgb(var(--gray)); font-size: 1.1rem;">{artigo.data.descricao}</p>
+    {artigo.data.destino && (
+      <p style="margin-top: 0.5rem; font-weight: bold; color: var(--niche-color);">
+        📍 Destino: {artigo.data.destino}
+      </p>
+    )}
+  </div>
   
-  <hr style="margin: 2rem 0; border: 1px solid #eee;" />
+  <hr style="margin: 2rem 0; border: none; border-top: 1px solid rgb(var(--gray-light));" />
 
-  <article>
-    <Content /> 
-  </article>
+  <Content /> 
   
-  <div style="margin-top: 2rem;">
-    <a href="/viagens/roteiros">← Voltar para Roteiros</a>
+  <div style="margin-top: 4rem;">
+    <a href="/viagens/roteiros" style="text-decoration: none; font-weight: bold;">&larr; Voltar para Roteiros</a>
   </div>
 </LayoutDinamico>
-

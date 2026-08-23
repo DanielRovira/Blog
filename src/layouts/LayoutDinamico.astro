@@ -99,10 +99,8 @@ const dadosNicho = configNichos[nicho] || configNichos.default;
   <body style={`--niche-color: ${dadosNicho.cor};`}>
     
     {nicho === 'default' ? (
-    //   <!-- Main Astro Blog Header -->
       <Header />
     ) : (
-    //   <!-- Sub-Blog Specific Header -->
       <header class="niche-header">
         <a href={dadosNicho.links[0]?.url || '/'} class="brand">
           {dadosNicho.nome}
