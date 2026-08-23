@@ -52,66 +52,11 @@ const dadosNicho = configNichos[nicho] || configNichos.default;
         color: rgb(var(--gray-dark));
       }
 
-      /* Niche specific styling */
-      .niche-header {
-        background-color: var(--niche-color, #333);
-        padding: 1.5rem 2rem;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      }
-      
-      .niche-header .brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-      }
-      
-      .niche-header nav {
-        display: flex;
-        gap: 1.5rem;
-      }
-      
-      .niche-header nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        opacity: 0.9;
-        transition: opacity 0.2s;
-      }
-      
-      .niche-header nav a:hover {
-        opacity: 1;
-        text-decoration: underline;
-      }
-
-      @media (max-width: 720px) {
-        .niche-header {
-          flex-direction: column;
-          gap: 1rem;
-        }
-      }
     </style>
   </head>
   <body style={`--niche-color: ${dadosNicho.cor};`}>
     
-    {nicho === 'default' ? (
-      <Header />
-    ) : (
-      <header class="niche-header">
-        <a href={dadosNicho.links[0]?.url || '/'} class="brand">
-          {dadosNicho.nome}
-        </a>
-        <nav>
-          {dadosNicho.links.map((link) => (
-            <a href={link.url}>{link.label}</a>
-          ))}
-        </nav>
-      </header>
-    )}
+    <Header nicho={nicho} />
     
     <main>
       <article>
