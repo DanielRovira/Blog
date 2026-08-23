@@ -27,17 +27,18 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 			{dadosNicho.links.map((link) => (
 				<HeaderLink href={link.url}>{link.label}</HeaderLink>
 			))}
-			
-			<div class="dropdown">
-				<HeaderLink href="/blogs" class="dropbtn">Blogs ▾</HeaderLink>
-				<div class="dropdown-content">
-					{Object.entries(configNichos)
-						.filter(([key]) => key !== 'default')
-						.map(([key, n]) => (
-							<a href={`/${key}`}>{n.nome}</a>
-						))}
-				</div>
-			</div>
+			{isDefault && (
+			    <div class="dropdown">
+			    	<HeaderLink href="/blogs" class="dropbtn">Blogs ▾</HeaderLink>
+			    	<div class="dropdown-content">
+			    		{Object.entries(configNichos)
+			    			.filter(([key]) => key !== 'default')
+			    			.map(([key, n]) => (
+			    				<a href={`/${key}`}>{n.nome}</a>
+			    			))}
+			    	</div>
+			    </div>
+            )}
 		</div>
 	</nav>
 </header>
