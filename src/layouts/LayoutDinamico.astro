@@ -1,42 +1,132 @@
 ---
 import { configNichos } from '../config/nichos.js';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-// 1. Criamos a interface definindo os tipos exatos esperados
 export interface Props {
   title: string;
-  // 'keyof typeof' diz ao TypeScript que 'nicho' só pode ser uma das chaves que existem lá no nichos.js
-  nicho?: keyof typeof configNichos; 
+  nicho?: keyof typeof configNichos;
+  description?: string;
+  heroImage?: string;
 }
 
-// 2. O Astro automaticamente aplica a interface Props aqui
-const { nicho = 'default', title } = Astro.props;
-
-// 3. Agora o TypeScript sabe exatamente o que é 'dadosNicho', e o erro some
-const dadosNicho = configNichos[nicho];
+const { nicho = 'default', title, description = "", heroImage } = Astro.props;
+const dadosNicho = configNichos[nicho] || configNichos.default;
 ---
 
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <title>{title} | {dadosNicho.nome}</title>
-  </head>
-  <body>
-    <header style={`background-color: ${dadosNicho.cor}; padding: 1rem; color: white;`}>
-      <nav style="display: flex; gap: 1rem; align-items: center;">
-        <strong>{dadosNicho.nome}</strong>
-        
-        {/* Como o TypeScript agora entende a estrutura, o erro do 'link' também some automaticamente */}
-        {dadosNicho.links.map((link) => (
-          <a href={link.url} style="color: white; text-decoration: none;">
-            {link.label}
-          </a>
-        ))}
-      </nav>
-    </header>
+    <BaseHead title={`${title} | ${dadosNicho.nome}`} description={description} />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      .hero-image {
+        width: 100%;
+      }
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+      
+      .prose {
+        width: 720px;
+        max-width: 100%;
+        margin: auto;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+      }
 
-    <main style="padding: 2rem;">
-      <slot /> 
+      /* Niche specific styling */
+      .niche-header {
+        background-color: var(--niche-color, #333);
+        padding: 1.5rem 2rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      
+      .niche-header .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+      
+      .niche-header nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+      
+      .niche-header nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+      }
+      
+      .niche-header nav a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 720px) {
+        .niche-header {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body style={`--niche-color: ${dadosNicho.cor};`}>
+    
+    {nicho === 'default' ? (
+    //   <!-- Main Astro Blog Header -->
+      <Header />
+    ) : (
+    //   <!-- Sub-Blog Specific Header -->
+      <header class="niche-header">
+        <a href={dadosNicho.links[0]?.url || '/'} class="brand">
+          {dadosNicho.nome}
+        </a>
+        <nav>
+          {dadosNicho.links.map((link) => (
+            <a href={link.url}>{link.label}</a>
+          ))}
+        </nav>
+      </header>
+    )}
+    
+    <main>
+      <article>
+        <div class="hero-image">
+          {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+        </div>
+        
+        <div class="prose">
+          <slot />
+        </div>
+      </article>
     </main>
 
+    <Footer />
   </body>
 </html>

@@ -1,63 +1,96 @@
-# Astro Starter Kit: Blog
+# Projeto Multi-Blogs em Astro 🚀
 
-```sh
-npm create astro@latest -- --template blog
-```
+Bem-vindo ao seu projeto Astro estruturado para **múltiplos nichos (sub-blogs)**! 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Diferente do template padrão do Astro (que possui apenas um blog genérico), este projeto foi arquitetado para comportar diversos assuntos independentes dentro do mesmo domínio (ex: `/saude`, `/viagens`), compartilhando os mesmos componentes base, mas possuindo identidade visual e dados de navegação únicos.
 
-Features:
+## 📁 Estrutura do Projeto
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+A arquitetura gira em torno de três pilares principais:
 
-## 🚀 Project Structure
+1. **`src/config/nichos.js`**: O "Coração" do projeto. Aqui você define os nichos, suas cores principais e os links de navegação do menu de cada sub-blog.
+2. **`src/content.config.ts`**: Utiliza as **Content Collections** (Astro 5) para separar os arquivos Markdown de cada nicho de forma segura e tipada.
+3. **`src/layouts/LayoutDinamico.astro`**: Um layout global inteligente. Ele recebe a propriedade `nicho` (ex: `nicho="saude"`), lê as configurações no `nichos.js` e pinta o header/footer automaticamente com a cor daquele nicho, montando os links corretos.
 
-Inside of your Astro project, you'll see the following folders and files:
-
+### Visão Geral de Pastas
 ```text
-├── public/
+/
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── config/
+│   │   └── nichos.js           <-- Configurações de tema, cores e links
+│   ├── content/
+│   │   ├── saude/              <-- Markdowns do nicho de Saúde
+│   │   └── viagens/            <-- Markdowns do nicho de Viagens
+│   ├── layouts/
+│   │   └── LayoutDinamico.astro <-- Layout mestre responsivo aos nichos
+│   ├── pages/
+│   │   ├── saude/              <-- Rotas (Páginas) do nicho Saúde
+│   │   ├── viagens/            <-- Rotas (Páginas) do nicho Viagens
+│   │   └── index.astro         <-- Home principal (que lista todos os nichos no Header)
+│   └── content.config.ts       <-- Declaração das coleções (Astro 5)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🛠️ Como Adicionar um Novo Nicho (Passo a Passo)
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+Sempre que você quiser criar um novo sub-blog (por exemplo, "Tecnologia"), siga estes passos exatos:
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Passo 1: Atualizar o arquivo de Configuração
+Abra `src/config/nichos.js` e adicione o seu novo nicho ao objeto exportado:
+```javascript
+export const configNichos = {
+  // ... nichos existentes
+  tecnologia: {
+    nome: "Mundo Tech",
+    cor: "#8b5cf6", // Um roxo legal
+    links: [
+      { label: "Home Tech", url: "/tecnologia" },
+      { label: "Análises", url: "/tecnologia/analises" }
+    ]
+  }
+};
+```
+> **Nota:** Assim que você salvar isso, o Header do blog principal já ganhará o novo link automaticamente no menu "Blogs"!
 
-## 🧞 Commands
+### Passo 2: Criar a Coleção de Conteúdo
+Abra `src/content.config.ts` e declare a coleção do novo nicho:
+```typescript
+const tecnologiaCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: new URL('./content/tecnologia', import.meta.url) }),
+  schema: z.object({
+    titulo: z.string(),
+    descricao: z.string()
+  })
+});
 
-All commands are run from the root of the project, from a terminal:
+export const collections = {
+  // ... outras
+  tecnologia: tecnologiaCollection,
+};
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Passo 3: Criar a pasta de Conteúdo (Markdown)
+Crie a pasta `src/content/tecnologia/` e adicione seus primeiros posts `.md` dentro dela.
 
-## 👀 Want to learn more?
+### Passo 4: Criar as Rotas (Páginas)
+Crie a pasta `src/pages/tecnologia/` e adicione:
+1. `index.astro` (A página inicial de tecnologia, puxando `LayoutDinamico nicho="tecnologia"`)
+2. As pastas internas, como `src/pages/tecnologia/analises/[slug].astro`, fazendo o `getStaticPaths` puxar da sua nova coleção de `tecnologia`.
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+E pronto! Todo o ecossistema funcionará perfeitamente.
 
-## Credit
+---
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## 🧹 Arquivos Residuais do Template Padrão
+
+Como você iniciou com o template padrão do Astro e migrou para esta nova estrutura, alguns arquivos antigos podem ser excluídos com segurança se você desejar limpar o projeto:
+
+*   `src/layouts/BlogPost.astro` (Substituído pelo nosso `LayoutDinamico`)
+*   `src/components/FormattedDate.astro` (Específico do layout antigo)
+*   `src/pages/rss.xml.js` (Apontava para a pasta "blog" que não existe mais. Pode deletar ou reconfigurar depois).
+
+## 🚀 Comandos Úteis
+
+- `npm run dev`: Inicia o servidor local de desenvolvimento.
+- `npm run build`: Cria a versão de produção do site na pasta `dist/`.

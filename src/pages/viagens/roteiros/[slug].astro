@@ -1,0 +1,37 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
+
+export async function getStaticPaths() {
+  const artigosViagens = await getCollection('viagens');
+  
+  return artigosViagens.map(artigo => ({
+    params: { slug: artigo.id },
+    props: { artigo },
+  }));
+}
+
+export interface Props {
+  artigo: CollectionEntry<'viagens'>;
+}
+
+const { artigo } = Astro.props;
+const { Content } = await render(artigo);
+---
+
+<LayoutDinamico nicho="viagens" title={artigo.data.titulo}>
+  <h2>{artigo.data.titulo}</h2>
+  {artigo.data.destino && <p><strong>Destino:</strong> {artigo.data.destino}</p>}
+  <p><em>{artigo.data.descricao}</em></p>
+  
+  <hr style="margin: 2rem 0; border: 1px solid #eee;" />
+
+  <article>
+    <Content /> 
+  </article>
+  
+  <div style="margin-top: 2rem;">
+    <a href="/viagens/roteiros">← Voltar para Roteiros</a>
+  </div>
+</LayoutDinamico>
+

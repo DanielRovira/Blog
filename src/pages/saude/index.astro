@@ -1,26 +1,23 @@
 ---
-// Importamos o layout e a função para ler as coleções
 import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
+import GridPosts from '../../components/ui/GridPosts.astro';
 import { getCollection } from 'astro:content';
 
-// Puxamos todas as receitas salvas na nossa pasta content/saude
 const todasAsReceitas = await getCollection('saude');
+const gridItems = todasAsReceitas.map((receita) => ({
+  url: `/saude/receitas/${receita.id}`,
+  title: receita.data.titulo,
+  description: receita.data.descricao,
+  color: '#10b981',
+  tagText: receita.data.titulo.substring(0, 2)
+}));
 ---
 
 <LayoutDinamico nicho="saude" title="Receitas Saudáveis">
-  <h1>Receitas para sua Rotina</h1>
-  <p>Escolha uma das nossas opções rápidas e saudáveis abaixo:</p>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1>Receitas para sua Rotina</h1>
+    <p>Escolha uma das nossas opções rápidas e saudáveis abaixo:</p>
+  </div>
   
-  <ul>
-    {/* O map vai varrer nossos arquivos Markdown e criar um link para cada um automaticamente */}
-    {todasAsReceitas.map((receita) => (
-      <li style="margin-bottom: 10px;">
-        <a href={`/saude/receitas/${receita.id}`} style="text-decoration: none; color: #10b981; font-weight: bold;">
-          {receita.data.titulo}
-        </a>
-        <br />
-        <small style="color: #666;">{receita.data.descricao}</small>
-      </li>
-    ))}
-  </ul>
+  <GridPosts items={gridItems} />
 </LayoutDinamico>

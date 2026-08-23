@@ -1,14 +1,22 @@
 ---
 import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
+import GridPosts from '../../../components/ui/GridPosts.astro';
 import { getCollection } from 'astro:content';
 
 const todasAsReceitas = await getCollection('saude');
+const gridItems = todasAsReceitas.map((receita) => ({
+  url: `/saude/receitas/${receita.id}`,
+  title: receita.data.titulo,
+  description: receita.data.descricao,
+  color: '#10b981',
+  tagText: receita.data.titulo.substring(0, 2)
+}));
 ---
 <LayoutDinamico nicho="saude" title="Receitas">
-  <h1>Lista de Receitas</h1>
-  <ul>
-    {todasAsReceitas.map((receita) => (
-      <li><a href={`/saude/receitas/${receita.id}`}>{receita.data.titulo}</a></li>
-    ))}
-  </ul>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1>Lista de Receitas</h1>
+    <p>Explore todas as nossas receitas para sua dieta.</p>
+  </div>
+  
+  <GridPosts items={gridItems} />
 </LayoutDinamico>

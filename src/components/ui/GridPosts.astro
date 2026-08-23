@@ -1,0 +1,114 @@
+---
+export interface GridItem {
+  url: string;
+  title: string;
+  description?: string;
+  color?: string;
+  tagText: string;
+}
+
+export interface Props {
+  items: GridItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="reusable-grid">
+  {
+    items.map((item) => (
+      <li>
+        <a href={item.url}>
+          <div class="imagem-nicho" style={`background-color: ${item.color || '#333'};`}>
+            {item.tagText}
+          </div>
+          <h4 class="title">{item.title}</h4>
+          {item.description && <p class="description">{item.description}</p>}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .reusable-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .reusable-grid li {
+    width: calc(50% - 1rem);
+  }
+  .reusable-grid li * {
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  .reusable-grid li:first-child {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .reusable-grid li:first-child .imagem-nicho {
+    width: 100%;
+    height: 360px;
+  }
+  .reusable-grid li:first-child .title {
+    font-size: 2.369rem;
+  }
+  .imagem-nicho {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+  }
+  .reusable-grid li a {
+    display: block;
+  }
+  .title {
+    margin: 0;
+    color: rgb(var(--black));
+    line-height: 1.2;
+  }
+  .description {
+    margin: 0.5rem 0 0 0;
+    color: rgb(var(--gray));
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .reusable-grid li a:hover .title {
+    color: rgb(var(--accent));
+  }
+  .reusable-grid a:hover .imagem-nicho {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+  }
+  @media (max-width: 720px) {
+    .reusable-grid {
+      gap: 1.5em;
+    }
+    .reusable-grid li {
+      width: 100%;
+      text-align: center;
+    }
+    .reusable-grid li:first-child {
+      margin-bottom: 0;
+    }
+    .reusable-grid li:first-child .title {
+      font-size: 1.563em;
+    }
+    .imagem-nicho, .reusable-grid li:first-child .imagem-nicho {
+      height: 250px;
+    }
+  }
+</style>
+

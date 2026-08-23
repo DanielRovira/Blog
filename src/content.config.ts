@@ -2,7 +2,6 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const saudeCollection = defineCollection({
-  // Mudamos o 'base' para resolver o caminho relativo ao próprio arquivo config
   loader: glob({ pattern: '**/*.md', base: new URL('./content/saude', import.meta.url) }),
   schema: z.object({
     titulo: z.string(),
@@ -10,6 +9,16 @@ const saudeCollection = defineCollection({
   })
 });
 
+const viagensCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: new URL('./content/viagens', import.meta.url) }),
+  schema: z.object({
+    titulo: z.string(),
+    descricao: z.string(),
+    destino: z.string().optional()
+  })
+});
+
 export const collections = {
   saude: saudeCollection,
+  viagens: viagensCollection,
 };

@@ -1,0 +1,39 @@
+---
+import { configNichos } from '../../config/nichos.js';
+
+export interface Props {
+  nicho: keyof typeof configNichos;
+  href: string;
+  label?: string;
+}
+
+const { nicho, href, label } = Astro.props;
+const dadosNicho = configNichos[nicho] || configNichos.default;
+---
+
+<a 
+  href={href} 
+  class="btn-nicho" 
+  style={`background-color: ${dadosNicho.cor}; border-color: ${dadosNicho.cor};`}
+>
+  {label ? label : <slot />}
+</a>
+
+<style>
+  .btn-nicho {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: filter 0.2s;
+  }
+  
+  .btn-nicho:hover {
+    filter: brightness(0.9);
+    color: white;
+  }
+</style>
+

@@ -1,0 +1,39 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import GridPosts from '../../components/ui/GridPosts.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { configNichos } from '../../config/nichos.js';
+
+const nichos = Object.entries(configNichos).filter(([key]) => key !== 'default');
+const gridItems = nichos.map(([key, nicho]) => ({
+  url: `/${key}`,
+  title: `Explorar o blog ${nicho.nome}`,
+  color: nicho.cor,
+  tagText: nicho.nome
+}));
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<BaseHead title={`Nossos Blogs | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+        max-width: calc(100% - 2rem);
+        margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+        <GridPosts items={gridItems} />
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

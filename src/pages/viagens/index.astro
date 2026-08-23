@@ -1,0 +1,23 @@
+---
+import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
+import GridPosts from '../../components/ui/GridPosts.astro';
+import { getCollection } from 'astro:content';
+
+const roteiros = await getCollection('viagens');
+const gridItems = roteiros.map((roteiro) => ({
+  url: `/viagens/roteiros/${roteiro.id}`,
+  title: roteiro.data.titulo,
+  description: roteiro.data.descricao,
+  color: '#3b82f6',
+  tagText: roteiro.data.titulo.substring(0, 2)
+}));
+---
+
+<LayoutDinamico nicho="viagens" title="Home Viagens">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1>Guia de Viagens</h1>
+    <p>Bem-vindo ao seu guia de roteiros e checklists!</p>
+  </div>
+  
+  <GridPosts items={gridItems} />
+</LayoutDinamico>
