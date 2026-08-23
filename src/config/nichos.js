@@ -12,7 +12,7 @@ export const configNichos = {
     cor: "#10b981", // Verde
     links: [
       { label: "Home", url: "/saude" },
-      { label: "Receitas", url: "/saude/receitas" },
+      { label: "Receitas", url: "/saude/conteudos" },
     //   { label: "Ferramentas", url: "/saude/ferramentas" }
     ]
   },
@@ -21,7 +21,7 @@ export const configNichos = {
     cor: "#3b82f6", // Azul
     links: [
       { label: "Home", url: "/viagens" },
-      { label: "Roteiros", url: "/viagens/roteiros" },
+      { label: "Roteiros", url: "/viagens/conteudos" },
     //   { label: "Checklist", url: "/viagens/checklist" }
     ]
   }

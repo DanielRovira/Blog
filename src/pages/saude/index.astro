@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 
 const todasAsReceitas = await getCollection('saude');
 const gridItems = todasAsReceitas.map((receita) => ({
-  url: `/saude/receitas/${receita.id}`,
+  url: `/saude/conteudos/${receita.id}`,
   title: receita.data.titulo,
   description: receita.data.descricao,
   color: '#10b981',

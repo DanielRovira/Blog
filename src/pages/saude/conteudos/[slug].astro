@@ -3,31 +3,26 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
 
 export async function getStaticPaths() {
-  const artigosViagens = await getCollection('viagens');
+  const artigosSaude = await getCollection('saude');
   
-  return artigosViagens.map(artigo => ({
+  return artigosSaude.map(artigo => ({
     params: { slug: artigo.id },
     props: { artigo },
   }));
 }
 
 export interface Props {
-  artigo: CollectionEntry<'viagens'>;
+  artigo: CollectionEntry<'saude'>;
 }
 
 const { artigo } = Astro.props;
 const { Content } = await render(artigo);
 ---
 
-<LayoutDinamico nicho="viagens" title={artigo.data.titulo} description={artigo.data.descricao}>
+<LayoutDinamico nicho="saude" title={artigo.data.titulo} description={artigo.data.descricao}>
   <div style="text-align: center; margin-bottom: 2rem;">
     <h1 style="margin-bottom: 0.5rem;">{artigo.data.titulo}</h1>
     <p style="color: rgb(var(--gray)); font-size: 1.1rem;">{artigo.data.descricao}</p>
-    {artigo.data.destino && (
-      <p style="margin-top: 0.5rem; font-weight: bold; color: var(--niche-color);">
-        📍 Destino: {artigo.data.destino}
-      </p>
-    )}
   </div>
   
   <hr style="margin: 2rem 0; border: none; border-top: 1px solid rgb(var(--gray-light));" />
@@ -35,6 +30,6 @@ const { Content } = await render(artigo);
   <Content /> 
   
   <div style="margin-top: 4rem;">
-    <a href="/viagens/roteiros" style="text-decoration: none; font-weight: bold;">&larr; Voltar para Roteiros</a>
+    <a href="/saude/conteudos" style="text-decoration: none; font-weight: bold;">&larr; Voltar para Receitas</a>
   </div>
 </LayoutDinamico>

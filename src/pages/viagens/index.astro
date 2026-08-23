@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 
 const roteiros = await getCollection('viagens');
 const gridItems = roteiros.map((roteiro) => ({
-  url: `/viagens/roteiros/${roteiro.id}`,
+  url: `/viagens/conteudos/${roteiro.id}`,
   title: roteiro.data.titulo,
   description: roteiro.data.descricao,
   color: '#3b82f6',
