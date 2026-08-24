@@ -1,6 +1,6 @@
 ---
-titulo: "3 Dias em Paris: O Roteiro Clássico"
-descricao: "Um guia rápido para aproveitar o melhor de Paris em poucos dias."
+title: "3 Dias em Paris: O Roteiro Clássico"
+description: "Um guia rápido para aproveitar o melhor de Paris em poucos dias."
 destino: "Paris, França"
 ---
 

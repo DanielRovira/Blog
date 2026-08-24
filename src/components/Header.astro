@@ -12,10 +12,10 @@ const dadosNicho = configNichos[nicho] || configNichos.default;
 const isDefault = nicho === 'default';
 
 // Lógica de Cores e Identidade Visual
-const headerBg = isDefault ? 'white' : dadosNicho.cor;
+const headerBg = isDefault ? 'white' : dadosNicho.color;
 const textColor = isDefault ? 'var(--black)' : '255, 255, 255'; // RGB format to use in rgba if needed, or just white
 const activeColor = isDefault ? 'var(--accent)' : 'white';
-const brandName = isDefault ? SITE_TITLE : dadosNicho.nome;
+const brandName = isDefault ? SITE_TITLE : dadosNicho.title;
 const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 ---
 
@@ -34,7 +34,7 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 			    		{Object.entries(configNichos)
 			    			.filter(([key]) => key !== 'default')
 			    			.map(([key, n]) => (
-			    				<a href={`/${key}`}>{n.nome}</a>
+			    				<a href={`/${key}`}>{n.title}</a>
 			    			))}
 			    	</div>
 			    </div>

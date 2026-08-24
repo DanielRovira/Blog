@@ -6,9 +6,9 @@ import { configNichos } from '../../config/nichos.js';
 const nichos = Object.entries(configNichos).filter(([key]) => key !== 'default');
 const gridItems = nichos.map(([key, nicho]) => ({
   url: `/${key}`,
-  title: `Explorar o blog ${nicho.nome}`,
-  color: nicho.cor,
-  tagText: nicho.nome
+  title: `Explorar o blog ${nicho.title}`,
+  color: nicho.color,
+  tagText: nicho.title
 }));
 ---
 

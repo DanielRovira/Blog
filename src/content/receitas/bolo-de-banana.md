@@ -1,6 +1,6 @@
 ---
-titulo: "Bolo de Banana Fit"
-descricao: "Fica pronto em apenas 20 minutos!"
+title: "Bolo de Banana Fit"
+description: "Fica pronto em apenas 20 minutos!"
 ---
 
 ### Ingredientes:

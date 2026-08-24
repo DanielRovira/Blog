@@ -1,0 +1,64 @@
+---
+import { render, getCollection, type CollectionKey } from 'astro:content';
+import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
+import { configNichos } from '../../../config/nichos';
+import fs from 'node:fs';
+import path from 'node:path';
+
+type NichoKey = keyof Omit<typeof configNichos, 'default'>;
+
+export async function getStaticPaths() {
+  const nichos = Object.keys(configNichos).filter(k => k !== 'default') as NichoKey[];
+  let paths: Array<{ params: { niche: string; slug: string }; props: { artigo: any; niche: NichoKey } }> = [];
+
+  for (const niche of nichos) {
+    const artigos = await getCollection(niche as CollectionKey);
+    for (const artigo of artigos) {
+      paths.push({
+        params: { niche, slug: artigo.id },
+        props: { artigo, niche },
+      });
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  artigo: any;
+  niche: NichoKey;
+}
+
+const { artigo, niche } = Astro.props as Props;
+const { Content } = await render(artigo); // Nota: Lembre-se de importar o render de 'astro:content'
+
+// Validação dinâmica da imagem de capa por convenção
+const caminhoRelativoPublic = `/${niche}/${artigo.id}/capa.jpeg`;
+const caminhoFisico = path.join(process.cwd(), 'public', caminhoRelativoPublic);
+const caminhoImagem = fs.existsSync(caminhoFisico) ? caminhoRelativoPublic : null;
+---
+
+<LayoutDinamico nicho={niche} title={artigo.data.title} description={artigo.data.description}>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="margin-bottom: 0.5rem;">{artigo.data.title}</h1>
+    <p style="color: rgb(var(--gray)); font-size: 1.1rem;">{artigo.data.description}</p>
+  </div>
+  
+  {caminhoImagem && (
+    <div style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: var(--box-shadow);">
+      <img 
+        src={caminhoImagem} 
+        alt={`Capa: ${artigo.data.title}`} 
+        style="width: 100%; height: auto; max-height: 450px; object-fit: cover; display: block;"
+      />
+    </div>
+  )}
+
+  <hr style="margin: 2rem 0; border: none; border-top: 1px solid rgb(var(--gray-light));" />
+
+  <Content /> 
+  
+  <div style="margin-top: 4rem;">
+    <a href={`/${niche}`} style="text-decoration: none; font-weight: bold;">&larr; Voltar</a>
+  </div>
+</LayoutDinamico>

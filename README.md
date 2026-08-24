@@ -2,7 +2,7 @@
 
 Bem-vindo ao seu projeto Astro estruturado para **múltiplos nichos (sub-blogs)**! 
 
-Diferente do template padrão do Astro (que possui apenas um blog genérico), este projeto foi arquitetado para comportar diversos assuntos independentes dentro do mesmo domínio (ex: `/saude`, `/viagens`), compartilhando os mesmos componentes base, mas possuindo identidade visual e dados de navegação únicos.
+Diferente do template padrão do Astro (que possui apenas um blog genérico), este projeto foi arquitetado para comportar diversos assuntos independentes dentro do mesmo domínio (ex: `/receitas`, `/viagens`), compartilhando os mesmos componentes base, mas possuindo identidade visual e dados de navegação únicos.
 
 ## 📁 Estrutura do Projeto
 
@@ -10,7 +10,7 @@ A arquitetura gira em torno de três pilares principais:
 
 1. **`src/config/nichos.js`**: O "Coração" do projeto. Aqui você define os nichos, suas cores principais e os links de navegação do menu de cada sub-blog.
 2. **`src/content.config.ts`**: Utiliza as **Content Collections** (Astro 5) para separar os arquivos Markdown de cada nicho de forma segura e tipada.
-3. **`src/layouts/LayoutDinamico.astro`**: Um layout global inteligente. Ele recebe a propriedade `nicho` (ex: `nicho="saude"`), lê as configurações no `nichos.js` e pinta o header/footer automaticamente com a cor daquele nicho, montando os links corretos.
+3. **`src/layouts/LayoutDinamico.astro`**: Um layout global inteligente. Ele recebe a propriedade `nicho` (ex: `nicho="receitas"`), lê as configurações no `nichos.js` e pinta o header/footer automaticamente com a cor daquele nicho, montando os links corretos.
 
 ### Visão Geral de Pastas
 ```text
@@ -19,12 +19,12 @@ A arquitetura gira em torno de três pilares principais:
 │   ├── config/
 │   │   └── nichos.js           <-- Configurações de tema, cores e links
 │   ├── content/
-│   │   ├── saude/              <-- Markdowns do nicho de Saúde
+│   │   ├── receitas/              <-- Markdowns do nicho de Receitas
 │   │   └── viagens/            <-- Markdowns do nicho de Viagens
 │   ├── layouts/
 │   │   └── LayoutDinamico.astro <-- Layout mestre responsivo aos nichos
 │   ├── pages/
-│   │   ├── saude/              <-- Rotas (Páginas) do nicho Saúde
+│   │   ├── receitas/              <-- Rotas (Páginas) do nicho Receitas
 │   │   ├── viagens/            <-- Rotas (Páginas) do nicho Viagens
 │   │   └── index.astro         <-- Home principal (que lista todos os nichos no Header)
 │   └── content.config.ts       <-- Declaração das coleções (Astro 5)
@@ -42,8 +42,8 @@ Abra `src/config/nichos.js` e adicione o seu novo nicho ao objeto exportado:
 export const configNichos = {
   // ... nichos existentes
   tecnologia: {
-    nome: "Mundo Tech",
-    cor: "#8b5cf6", // Um roxo legal
+    title: "Mundo Tech",
+    color: "#8b5cf6", // Um roxo legal
     links: [
       { label: "Home Tech", url: "/tecnologia" },
       { label: "Análises", url: "/tecnologia/analises" }
@@ -59,8 +59,8 @@ Abra `src/content.config.ts` e declare a coleção do novo nicho:
 const tecnologiaCollection = defineCollection({
   loader: glob({ pattern: '**/*.md', base: new URL('./content/tecnologia', import.meta.url) }),
   schema: z.object({
-    titulo: z.string(),
-    descricao: z.string()
+    title: z.string(),
+    description: z.string()
   })
 });
 

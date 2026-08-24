@@ -1,24 +1,27 @@
 export const configNichos = {
   default: {
-    nome: "Guia Prático",
-    cor: "#333333", // Cor padrão (Home principal)
+    title: "Guia Prático",
+    color: "#333333", // Cor padrão (Home principal)
+    description: "Bem-vindo ao Guia Prático, seu recurso confiável para informações úteis e práticas.",
     links: [
       { label: "Início", url: "/" },
       { label: "Sobre", url: "/sobre" }
     ]
   },
-  saude: {
-    nome: "Saúde & Rotina",
-    cor: "#10b981", // Verde
+  receitas: {
+    title: "Receitas saudáveis",
+    color: "#10b981", // Verde
+    description: "Descubra receitas saudáveis e deliciosas para o seu dia a dia.",
     links: [
-      { label: "Home", url: "/saude" },
-      { label: "Receitas", url: "/saude/conteudos" },
-    //   { label: "Ferramentas", url: "/saude/ferramentas" }
+      { label: "Home", url: "/receitas" },
+      { label: "Receitas", url: "/receitas/conteudos" },
+    //   { label: "Ferramentas", url: "/receitas/ferramentas" }
     ]
   },
   viagens: {
-    nome: "Guia de Viagens",
-    cor: "#3b82f6", // Azul
+    title: "Guia de Viagens",
+    color: "#3b82f6", // Azul
+    description: "Explore destinos incríveis e planeje suas próximas aventuras.",
     links: [
       { label: "Home", url: "/viagens" },
       { label: "Roteiros", url: "/viagens/conteudos" },

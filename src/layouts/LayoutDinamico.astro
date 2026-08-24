@@ -17,7 +17,7 @@ const dadosNicho = configNichos[nicho] || configNichos.default;
 
 <html lang="pt-BR">
   <head>
-    <BaseHead title={`${title} | ${dadosNicho.nome}`} description={description} />
+    <BaseHead title={`${title} | ${dadosNicho.title}`} description={description} />
     <style>
       body {
         margin: 0;
@@ -54,7 +54,7 @@ const dadosNicho = configNichos[nicho] || configNichos.default;
 
     </style>
   </head>
-  <body style={`--niche-color: ${dadosNicho.cor};`}>
+  <body style={`--niche-color: ${dadosNicho.color};`}>
     
     <Header nicho={nicho} />
     

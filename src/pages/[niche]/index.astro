@@ -1,0 +1,51 @@
+---
+import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
+import GridPosts from '../../components/ui/GridPosts.astro';
+import { getCollection, type CollectionKey } from 'astro:content';
+import { configNichos } from '../../config/nichos';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Tipagem segura para as chaves do configNichos (excluindo 'default' para as rotas de nicho)
+type NichoKey = keyof Omit<typeof configNichos, 'default'>;
+
+export function getStaticPaths() {
+  // Pegamos todas as chaves e removemos a chave 'default' das rotas dinâmicas de nicho
+  const nichos = Object.keys(configNichos).filter(k => k !== 'default') as NichoKey[];
+  
+  return nichos.map((niche) => ({
+    params: { niche },
+  }));
+}
+
+// Tipamos o parâmetro recebido da URL
+const { niche } = Astro.params as { niche: NichoKey };
+const configNicho = configNichos[niche];
+
+// Passamos o nicho como chave válida para o getCollection
+const artigos = await getCollection(niche as CollectionKey);
+
+const gridItems = artigos.map((article) => {
+  const caminhoRelativoPublic = `/${niche}/${article.id}/capa.jpeg`;
+  const caminhoFisico = path.join(process.cwd(), 'public', caminhoRelativoPublic);
+  const temImagem = fs.existsSync(caminhoFisico);
+
+  return {
+    url: `/${niche}/contents/${article.id}`,
+    title: article.data.title,
+    description: article.data.description,
+    color: configNicho.color,
+    tagText: article.data.title.substring(0, 2),
+    image: temImagem ? caminhoRelativoPublic : undefined
+  };
+});
+---
+
+<LayoutDinamico nicho={niche} title={configNicho.title}>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1>{configNicho.title}</h1>
+    <p>{configNicho.description}</p>
+  </div>
+  
+  <GridPosts items={gridItems} />
+</LayoutDinamico>
