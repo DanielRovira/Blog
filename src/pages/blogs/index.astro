@@ -26,10 +26,22 @@ const gridItems = nichos.map(([key, nicho]) => {
 ---
 
 <LayoutDinamico nicho="default" title="Nossos Blogs">
-  <div style="text-align: center; margin-bottom: 2rem;">
+  <div class="page-intro">
     <h1>Nossos Blogs</h1>
     <p>Escolha um dos nichos abaixo para explorar conteúdos especializados.</p>
   </div>
   
   <GridPosts items={gridItems} />
 </LayoutDinamico>
+
+<style>
+  .page-intro {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .page-intro p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+</style>

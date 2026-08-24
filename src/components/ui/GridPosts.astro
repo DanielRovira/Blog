@@ -28,8 +28,8 @@ const { items } = Astro.props;
               class="imagem-nicho image-cover" 
             />
           ) : (
-            <div class="imagem-nicho" style={`background-color: ${item.color || '#333'}; overflow: hidden;`}>
-              <div style="text-align: center; padding: 1rem;" >{item.tagText}</div>
+            <div class="imagem-nicho fallback-image" style={`--item-color: ${item.color || '#333'};`}>
+              <div class="fallback-label">{item.tagText}</div>
             </div>
           )}
           
@@ -73,6 +73,16 @@ const { items } = Astro.props;
     box-shadow: var(--box-shadow);
   }
 
+  .fallback-image {
+    background-color: var(--item-color);
+    overflow: hidden;
+  }
+
+  .fallback-label {
+    padding: 1rem;
+    text-align: center;
+  }
+
   /* Nova classe específica para a tag <img> não distorcer */
   img.image-cover {
     object-fit: cover;
@@ -111,7 +121,7 @@ const { items } = Astro.props;
       text-align: center;
     }
     .imagem-nicho {
-      height: 250px;
+      height: clamp(180px, 52vw, 250px);
     }
   }
 </style>

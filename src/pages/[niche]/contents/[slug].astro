@@ -39,26 +39,82 @@ const caminhoImagem = fs.existsSync(caminhoFisico) ? caminhoRelativoPublic : nul
 ---
 
 <LayoutDinamico nicho={niche} title={artigo.data.title} description={artigo.data.description}>
-  <div style="text-align: center; margin-bottom: 2rem;">
-    <h1 style="margin-bottom: 0.5rem;">{artigo.data.title}</h1>
-    <p style="color: rgb(var(--gray)); font-size: 1.1rem;">{artigo.data.description}</p>
+  <div class="article-header">
+    <h1>{artigo.data.title}</h1>
+    <p>{artigo.data.description}</p>
   </div>
   
   {caminhoImagem && (
-    <div style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: var(--box-shadow);">
+    <div class="article-cover">
       <img 
         src={caminhoImagem} 
         alt={`Capa: ${artigo.data.title}`} 
-        style="width: 100%; height: auto; max-height: 450px; object-fit: cover; display: block;"
+        class="article-cover-image"
       />
     </div>
   )}
 
-  <hr style="margin: 2rem 0; border: none; border-top: 1px solid rgb(var(--gray-light));" />
+  <hr class="article-divider" />
 
   <Content /> 
   
-  <div style="margin-top: 4rem;">
-    <a href={`/${niche}`} style="text-decoration: none; font-weight: bold;">&larr; Voltar</a>
+  <div class="article-footer">
+    <a href={`/${niche}`}>&larr; Voltar</a>
   </div>
 </LayoutDinamico>
+
+<style>
+  .article-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .article-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-header p {
+    color: rgb(var(--gray));
+    font-size: 1.1rem;
+  }
+
+  .article-cover {
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+
+  .article-cover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+  }
+
+  .article-divider {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid rgb(var(--gray-light));
+  }
+
+  .article-footer {
+    margin-top: 4rem;
+  }
+
+  .article-footer a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    .article-header p {
+      font-size: 1rem;
+    }
+
+    .article-footer {
+      margin-top: 3rem;
+    }
+  }
+</style>

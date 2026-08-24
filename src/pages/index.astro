@@ -1,7 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 import LayoutDinamico from '../layouts/LayoutDinamico.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
@@ -13,7 +11,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	</head>
 	<body>
         <LayoutDinamico nicho="default" title="Nossos Blogs">
-            <main style="text-align: center;">
+            <main class="home-content">
                 <h1>
                 Bem-vindo ao Guia Prático
                 </h1>
@@ -29,3 +27,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
         </LayoutDinamico>
 	</body>
 </html>
+
+<style>
+    .home-content {
+        text-align: center;
+    }
+
+    .home-content p {
+        max-width: 65ch;
+        margin-right: auto;
+        margin-left: auto;
+    }
+</style>

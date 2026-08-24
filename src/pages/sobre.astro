@@ -14,28 +14,63 @@ import LayoutDinamico from '../layouts/LayoutDinamico.astro';
     
     <p>Nossa missão é construir o acervo de utilidades mais eficiente do Brasil. Acreditamos que seu tempo é o seu recurso mais valioso, e nosso trabalho é poupá-lo.</p>
 
-    <h2 style="margin-top: 3rem;">Como fazemos isso?</h2>
+    <h2 class="section-heading">Como fazemos isso?</h2>
     
     <p>Todo o nosso ecossistema é desenhado em torno de três pilares fundamentais:</p>
     
     <ul>
-      <li style="margin-bottom: 1rem;">
+      <li>
         <strong>Ferramentas Gratuitas:</strong> Desenvolvemos micro-ferramentas, calculadoras e geradores que entregam o resultado que você precisa em segundos, direto no seu navegador.
       </li>
-      <li style="margin-bottom: 1rem;">
+      <li>
         <strong>Conteúdo Direto ao Ponto:</strong> Nossos guias e receitas vão direto ao que interessa. Sem enrolação, sem jargões desnecessários. Apenas o passo a passo que funciona.
       </li>
-      <li style="margin-bottom: 1rem;">
+      <li>
         <strong>Soluções Aprofundadas:</strong> Para quem precisa de um acompanhamento mais completo, criamos materiais avançados e estruturados que resolvem problemas específicos de ponta a ponta.
       </li>
     </ul>
 
-    <h2 style="margin-top: 3rem;">Nossa Tecnologia</h2>
+    <h2 class="section-heading">Nossa Tecnologia</h2>
     <p>Levamos a experiência do usuário a sério. O Guia Prático é construído com arquiteturas modernas de desenvolvimento web (Astro e React), garantindo que nossas páginas carreguem de forma quase instantânea em qualquer dispositivo, consumindo o mínimo de dados do seu celular.</p>
 
-    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eee; text-align: center;">
+    <div class="about-footer">
       <p>Pronto para simplificar sua rotina?</p>
-      <a href="/" style="display: inline-block; padding: 0.8rem 2rem; background: #333; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Explorar nossas ferramentas</a>
+      <a href="/" class="about-cta">Explorar nossas ferramentas</a>
     </div>
   </div>
 </LayoutDinamico>
+
+<style>
+  .section-heading {
+    margin-top: 3rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  .about-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+
+  .about-cta {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    .about-cta {
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+</style>
