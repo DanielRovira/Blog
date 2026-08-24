@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import LayoutDinamico from '../layouts/LayoutDinamico.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -11,7 +12,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
+        <LayoutDinamico nicho="default" title="Nossos Blogs">
             <main style="text-align: center;">
                 <h2>
                 Bem-vindo ao Guia Prático
@@ -25,6 +26,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
                 Aqui você não encontra textos intermináveis e distrações. Seja para encontrar receitas saudáveis, planejar uma viagem ou resolver uma questão rápida do dia a dia, nosso foco é a utilidade prática. Fique à vontade para explorar os nossos conteúdos e ferramentas através do menu de navegação e descubra como podemos simplificar a sua rotina hoje.
                 </p>
             </main>
-		<Footer />
+        </LayoutDinamico>
 	</body>
 </html>

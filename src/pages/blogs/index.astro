@@ -2,16 +2,34 @@
 import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
 import GridPosts from '../../components/ui/GridPosts.astro';
 import { configNichos } from '../../config/nichos.js';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const nichos = Object.entries(configNichos).filter(([key]) => key !== 'default');
-const gridItems = nichos.map(([key, nicho]) => ({
-  url: `/${key}`,
-  title: `Explorar o blog ${nicho.title}`,
-  color: nicho.color,
-  tagText: nicho.title
-}));
+
+const gridItems = nichos.map(([key, nicho]) => {
+  // Caminho físico e público dinâmico baseado na chave do nicho
+  const caminhoRelativoPublic = `/${key}/capa-nicho.jpeg`;
+  const caminhoFisico = path.join(process.cwd(), 'public', caminhoRelativoPublic);
+  const temImagem = fs.existsSync(caminhoFisico);
+
+  return {
+    url: `/${key}`,
+    title: nicho.title,
+    description: nicho.description, // Aproveitei para incluir a descrição que estava faltando no seu map
+    color: nicho.color,
+    tagText: nicho.title,
+    // Se a imagem existir fisicamente na pasta, o Astro a exibe. Senão, ativa o fallback!
+    image: temImagem ? caminhoRelativoPublic : undefined
+  };
+});
 ---
 
 <LayoutDinamico nicho="default" title="Nossos Blogs">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1>Nossos Blogs</h1>
+    <p>Escolha um dos nichos abaixo para explorar conteúdos especializados.</p>
+  </div>
+  
   <GridPosts items={gridItems} />
 </LayoutDinamico>

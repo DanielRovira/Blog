@@ -28,8 +28,8 @@ const { items } = Astro.props;
               class="imagem-nicho image-cover" 
             />
           ) : (
-            <div class="imagem-nicho" style={`background-color: ${item.color || '#333'};`}>
-              {item.tagText}
+            <div class="imagem-nicho" style={`background-color: ${item.color || '#333'}; overflow: hidden;`}>
+              <div style="text-align: center; padding: 1rem;" >{item.tagText}</div>
             </div>
           )}
           

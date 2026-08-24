@@ -2,7 +2,7 @@ export const configNichos = {
   default: {
     title: "Guia Prático",
     color: "#333333", // Cor padrão (Home principal)
-    description: "Bem-vindo ao Guia Prático, seu recurso confiável para informações úteis e práticas.",
+    description: "",
     links: [
       { label: "Início", url: "/" },
       { label: "Sobre", url: "/sobre" }
@@ -14,7 +14,7 @@ export const configNichos = {
     description: "Descubra receitas saudáveis e deliciosas para o seu dia a dia.",
     links: [
       { label: "Home", url: "/receitas" },
-      { label: "Receitas", url: "/receitas/conteudos" },
+    //   { label: "Receitas", url: "/receitas/conteudos" },
     //   { label: "Ferramentas", url: "/receitas/ferramentas" }
     ]
   },
@@ -24,7 +24,7 @@ export const configNichos = {
     description: "Explore destinos incríveis e planeje suas próximas aventuras.",
     links: [
       { label: "Home", url: "/viagens" },
-      { label: "Roteiros", url: "/viagens/conteudos" },
+    //   { label: "Roteiros", url: "/viagens/conteudos" },
     //   { label: "Checklist", url: "/viagens/checklist" }
     ]
   }
