@@ -6,11 +6,9 @@ import { configNichos } from '../../config/nichos';
 import fs from 'node:fs';
 import path from 'node:path';
 
-// Tipagem segura para as chaves do configNichos (excluindo 'default' para as rotas de nicho)
 type NichoKey = keyof Omit<typeof configNichos, 'default'>;
 
 export function getStaticPaths() {
-  // Pegamos todas as chaves e removemos a chave 'default' das rotas dinâmicas de nicho
   const nichos = Object.keys(configNichos).filter(k => k !== 'default') as NichoKey[];
   
   return nichos.map((niche) => ({
@@ -18,11 +16,9 @@ export function getStaticPaths() {
   }));
 }
 
-// Tipamos o parâmetro recebido da URL
 const { niche } = Astro.params as { niche: NichoKey };
-const configNicho = configNichos[niche];
+const configNicho = configNichos[niche] || configNichos.default;
 
-// Passamos o nicho como chave válida para o getCollection
 const artigos = await getCollection(niche as CollectionKey);
 
 const gridItems = artigos.map((article) => {

@@ -3,21 +3,30 @@ import { configNichos } from '../config/nichos.js';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export interface Props {
   title: string;
   nicho?: keyof typeof configNichos;
   description?: string;
   heroImage?: string;
+  icon?: string; 
 }
 
-const { nicho = 'default', title, description = "", heroImage } = Astro.props;
+const { nicho = 'default', title, description = "", heroImage, icon } = Astro.props;
 const dadosNicho = configNichos[nicho] || configNichos.default;
+
+const iconeRelativoPublic = `/${nicho}/icone-nicho.svg`;
+const caminhoFisicoIcone = path.join(process.cwd(), 'public', iconeRelativoPublic);
+const temIconePersonalizado = fs.existsSync(caminhoFisicoIcone);
+const iconeFinal = icon || (temIconePersonalizado ? iconeRelativoPublic : undefined);
 ---
 
 <html lang="pt-BR">
   <head>
-    <BaseHead title={`${title} | ${dadosNicho.title}`} description={description} />
+    <BaseHead title={`${title} | ${dadosNicho.title}`} description={description} icon={iconeFinal} />
+    
     <style>
       body {
         margin: 0;
@@ -56,7 +65,6 @@ const dadosNicho = configNichos[nicho] || configNichos.default;
           padding: 0.5rem 0;
         }
       }
-
     </style>
   </head>
   <body>
