@@ -1,7 +1,6 @@
 ---
 title: "Roteiro Clássico para Paris: O Guia Definitivo de 4 Dias"
 description: "Descubra o melhor de Paris em 4 dias com um roteiro prático, otimizado e direto ao ponto para otimizar sua viagem."
-capa: "/viagem/roteiro-classico-paris/capa.jpg"
 ---
 
 ## Introdução
@@ -10,7 +9,7 @@ Visitar Paris pela primeira vez exige estratégia para não perder tempo em fila
 
 ## Dia 1: O Coração Histórico e a Torre Eiffel
 
-![Café e croissant em um bistrô parisiense](/viagem/roteiro-classico-paris/imagem1.jpg)
+![Café e croissant em um bistrô parisiense](/viagens/roteiro-classico-paris/imagem1.jpeg)
 
 O primeiro dia foca nos cartões-postais mais famosos de Paris, começando pela margem do Rio Sena.
 
@@ -20,6 +19,8 @@ O primeiro dia foca nos cartões-postais mais famosos de Paris, começando pela 
 
 ## Dia 2: Arte, Luxo e História
 
+![A icônica pirâmide de vidro do Museu do Louvre refletindo a luz do dia em Paris.](/viagens/roteiro-classico-paris/imagem2.jpeg)
+
 Dedique o segundo dia à cultura mundial e à grandiosidade arquitetônica parisiense.
 
 * **Manhã:** Visite o **Museu do Louvre**. Foque nas obras principais (como a *Mona Lisa* e a *Vitória de Samotrácia*) para não se esgotar.
@@ -28,6 +29,8 @@ Dedique o segundo dia à cultura mundial e à grandiosidade arquitetônica paris
 
 ## Dia 3: Boemia em Montmartre
 
+![Rua de paralelepípedo em Montmartre com bistrôs tradicionais e a Basílica de Sacré-Cœur ao fundo em Paris.](/viagens/roteiro-classico-paris/imagem3.jpeg)
+
 O terceiro dia é dedicado ao charme artístico e histórico de um dos bairros mais pitorescos da cidade.
 
 * **Manhã:** Sude a colina de **Montmartre** até a imponente **Basílica de Sacré-Cœur**. Visite a **Place du Tertre** para ver pintores de rua trabalhando.
@@ -35,6 +38,8 @@ O terceiro dia é dedicado ao charme artístico e histórico de um dos bairros m
 * **Noite:** Curta o clima universitário e jante em um dos bistrôs acolhedores do Bairro Latino.
 
 ## Dia 4: Palácios e Jardins Reais
+
+![Jardins reais franceses com sebes podadas, fontes clássicas e arquitetura barroca em Paris.](/viagens/roteiro-classico-paris/imagem4.jpeg)
 
 Encerre sua viagem com chave de ouro explorando a opulência da realeza francesa.
 

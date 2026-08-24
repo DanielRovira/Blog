@@ -5,6 +5,9 @@
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
 	--gray-gradient: rgba(var(--gray-light), 80%), #fff;
+	--table-border: rgba(var(--gray), 20%);
+	--table-header: rgba(var(--gray-light), 55%);
+	--table-row-alt: rgba(var(--gray-light), 25%);
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%);
 }
 
@@ -49,12 +52,67 @@ img {
 	border-radius: 8px;
 }
 
+table {
+	width: 100%;
+	margin: 2rem 0;
+	border: 1px solid var(--table-border);
+	border-radius: 8px;
+	border-spacing: 0;
+	background-color: rgba(255, 255, 255, 70%);
+	box-shadow: 0 1px 3px rgba(var(--gray), 8%);
+	font-size: 0.95em;
+	line-height: 1.5;
+	text-align: left;
+	border-collapse: separate;
+	overflow: hidden;
+}
+
+th,
+td {
+	padding: 0.75rem 1rem;
+	border-right: 1px solid var(--table-border);
+	border-bottom: 1px solid var(--table-border);
+	vertical-align: top;
+}
+
+th {
+	background-color: var(--table-header);
+	color: rgb(var(--black));
+	font-weight: 700;
+}
+
+th:last-child,
+td:last-child {
+	border-right: 0;
+}
+
+tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--table-row-alt);
+}
+
+tbody tr:hover {
+	background-color: rgba(var(--gray-light), 45%);
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
 	}
 	main {
 		padding: 2rem 0;
+	}
+    table {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	th,
+	td {
+		min-width: 9rem;
 	}
 }
 
