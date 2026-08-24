@@ -108,3 +108,6 @@ Com essa estrutura, **nenhum arquivo de rota nova precisa ser criado**. O sistem
 * `pnpm run dev`: Inicia o servidor local de desenvolvimento.
 * `pnpm run build`: Compila a versão estática de produção do site na pasta `dist/`.
 * `pnpm run astro sync`: Atualiza as tipagens internas do Astro para as coleções de conteúdo.
+
+## Ícones
+https://www.svgrepo.com/collection/flat-icon-design-dark-vectors
