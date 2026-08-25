@@ -3,29 +3,50 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Guia Prático. Todos os direitos reservados.
+    <div class="footer-links">
+        <a href="/politica-de-privacidade">Política de Privacidade</a>
+        <a href="/termos-de-uso">Termos de Uso</a>
+        <a href="/sobre">Sobre / Contato</a>
+    </div>
+    <p>&copy; {today.getFullYear()} Guia Prático. Todos os direitos reservados.</p>
 </footer>
+
 <style>
-	footer {
-		padding: 1em 0;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
+    footer {
+        padding: 1em 1em;
+        background: linear-gradient(var(--gray-gradient)) no-repeat;
+        color: rgb(var(--gray));
+        text-align: center;
         position: relative;
         bottom: 0;
         width: 100%;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .footer-links a {
+        color: rgb(var(--gray));
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+        color: rgb(var(--gray-dark));
+        text-decoration: underline;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.85rem;
+    }
 </style>

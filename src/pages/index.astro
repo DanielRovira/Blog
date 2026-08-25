@@ -6,36 +6,159 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 <!doctype html>
 <html lang="pt-br">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-        <LayoutDinamico nicho="default" title="Nossos Blogs">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <LayoutDinamico nicho="default" title="Bem-vindo">
             <main class="home-content">
-                <h1>
-                Bem-vindo ao Guia Prático
-                </h1>
-                
-                <p>
-                O seu acervo online definitivo de soluções diretas, manuais passo a passo e ferramentas gratuitas. Nós criamos o Guia Prático com um único objetivo: otimizar o seu tempo e ir direto ao ponto, entregando a informação que você precisa sem enrolação.
-                </p>
-                
-                <p>
-                Aqui você não encontra textos intermináveis e distrações. Seja para encontrar receitas saudáveis, planejar uma viagem ou resolver uma questão rápida do dia a dia, nosso foco é a utilidade prática. Fique à vontade para explorar os nossos conteúdos e ferramentas através do menu de navegação e descubra como podemos simplificar a sua rotina hoje.
-                </p>
+                <section class="hero-container">
+                    <h1>O acervo definitivo de utilidades e respostas diretas</h1>
+                    
+                    <p class="lead-text">
+                        A internet moderna foi tomada por páginas excessivamente longas, rodeadas de conteúdos vazios e distrações que apenas tomam o seu tempo. O <strong>Guia Prático</strong> nasceu para romper com esse padrão, centralizando manuais objetivos, passo a passos refinados e ferramentas automatizadas que resolvem problemas reais em segundos.
+                    </p>
+                </section>
+
+                <section class="pillars-section">
+                    <h2>Nossa Filosofia de Conteúdo</h2>
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <h3>Praticidade Absoluta</h3>
+                            <p>Cada guia é estruturado para ir direto ao ponto crítico. Sem introduções extensas ou teorias desnecessárias; você lê o que precisa e aplica imediatamente.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Foco na Utilidade</h3>
+                            <p>Desenvolvemos soluções e conteúdos voltados para demandas cotidianas e especializadas, garantindo alto valor prático para o seu dia a dia.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Experiência Limpa</h3>
+                            <p>Utilizamos tecnologias modernas de desenvolvimento web para assegurar carregamento instantáneo, consumo mínimo de dados e zero poluição visual.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Atualização Constante</h3>
+                            <p>Monitoramos tendências e revisamos nossos materiais periodicamente para garantir que você tenha sempre acesso a informações precisas, atuais e funcionais.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hub-cta-section">
+                    <h2>Explore Nossos Universos Temáticos</h2>
+                    <p>
+                        Para organizar melhor a nossa crescente biblioteca de conteúdos especializados, dividimos os tópicos em sub-blogs focados em nichos específicos. Cada espaço conta com publicações e recursos sob medida para aquela editoria.
+                    </p>
+                    <div class="cta-container">
+                        <a href="/blogs" class="btn-primary">Acessar a Central de Blogs &rarr;</a>
+                    </div>
+                </section>
             </main>
         </LayoutDinamico>
-	</body>
+    </body>
 </html>
 
 <style>
     .home-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem 0 3rem 0;
+    }
+
+    .hero-container {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .hero-container h1 {
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        margin-bottom: 1.25rem;
+        color: rgb(var(--gray-dark));
+        line-height: 1.2;
+    }
+
+    .lead-text {
+        font-size: 1.15rem;
+        color: rgb(var(--gray));
+        line-height: 1.7;
+        max-width: 72ch;
+        margin: 0 auto;
+    }
+
+    .pillars-section {
+        margin-bottom: 4rem;
+        text-align: left;
+    }
+
+    .pillars-section h2 {
+        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        color: rgb(var(--gray-dark));
+    }
+
+    .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .pillar-card {
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .pillar-card h3 {
+        font-size: 1.15rem;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        color: rgb(var(--gray-dark));
+    }
+
+    .pillar-card p {
+        font-size: 0.95rem;
+        color: rgb(var(--gray));
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .hub-cta-section {
+        background: rgba(var(--gray), 0.04);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 12px;
+        padding: 2.5rem 2rem;
         text-align: center;
     }
 
-    .home-content p {
-        max-width: 65ch;
-        margin-right: auto;
-        margin-left: auto;
+    .hub-cta-section h2 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: rgb(var(--gray-dark));
+    }
+
+    .hub-cta-section p {
+        font-size: 1.05rem;
+        color: rgb(var(--gray));
+        max-width: 60ch;
+        margin: 0 auto 2rem auto;
+        line-height: 1.6;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        background: rgb(var(--gray-dark));
+        color: #fff;
+        padding: 0.9rem 2.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+        background: #000;
+        transform: translateY(-2px);
     }
 </style>

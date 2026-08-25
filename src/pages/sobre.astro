@@ -3,11 +3,11 @@ import LayoutDinamico from '../layouts/LayoutDinamico.astro';
 ---
 
 <LayoutDinamico
-	title="Sobre o Guia Prático"
-	description="Lorem ipsum dolor sit amet"
-	nicho="default"
+    title="Sobre o Guia Prático"
+    description="Conheça a missão do Guia Prático: entregar conteúdo direto ao ponto, ferramentas úteis e soluções rápidas para o seu dia a dia."
+    nicho="default"
 >
-  <div>
+  <div class="prose" style="max-width: 800px; margin: 0 auto;">
     <h1>A internet está cheia de ruído. Nós focamos no que resolve.</h1>
     
     <p>O <strong>Guia Prático</strong> nasceu de uma frustração comum: tentar encontrar uma resposta simples na internet e esbarrar em textos intermináveis, sites lentos e promessas vazias.</p>
@@ -20,22 +20,32 @@ import LayoutDinamico from '../layouts/LayoutDinamico.astro';
     
     <ul>
       <li>
-        <strong>Ferramentas Gratuitas:</strong> Desenvolvemos micro-ferramentas, calculadoras e geradores que entregam o resultado que você precisa em segundos, direto no seu navegador.
+        <strong>Ferramentas Gratuitas:</strong> Desenvolvemos micro-ferramentas, calculadoras e utilitários que entregam o resultado que você precisa em segundos, direto no seu navegador.
       </li>
       <li>
-        <strong>Conteúdo Direto ao Ponto:</strong> Nossos guias e receitas vão direto ao que interessa. Sem enrolação, sem jargões desnecessários. Apenas o passo a passo que funciona.
+        <strong>Conteúdo Direto ao Ponto:</strong> Nossos guias vão direto ao que interessa. Sem enrolação, sem jargões desnecessários. Apenas o passo a passo que funciona.
       </li>
       <li>
-        <strong>Soluções Aprofundadas:</strong> Para quem precisa de um acompanhamento mais completo, criamos materiais avançados e estruturados que resolvem problemas específicos de ponta a ponta.
+        <strong>Soluções Aprofundadas:</strong> Para quem precisa de um acompanhamento mais completo, criamos materiais estruturados que resolvem problemas específicos de ponta a ponta.
       </li>
     </ul>
 
     <h2 class="section-heading">Nossa Tecnologia</h2>
-    <p>Levamos a experiência do usuário a sério. O Guia Prático é construído com arquiteturas modernas de desenvolvimento web (Astro e React), garantindo que nossas páginas carreguem de forma quase instantânea em qualquer dispositivo, consumindo o mínimo de dados do seu celular.</p>
+    <p>Levamos a experiência do usuário a sério. O Guia Prático é construído com arquiteturas modernas de desenvolvimento web, garantindo que nossas páginas carreguem de forma quase instantânea em qualquer dispositivo, consumindo o mínimo de dados do seu celular.</p>
+
+    <!-- SEÇÃO RECOMENDADA PELO GOOGLE ADSENSE: TRANSPARÊNCIA E ANÚNCIOS -->
+    <h2 class="section-heading">Transparência e Sustentabilidade</h2>
+    <p>Para mantermos o <strong>Guia Prático</strong> 100% gratuito e acessível para todos, este site exibe anúncios gerados por redes de anúncios de terceiros, como o <strong>Google AdSense</strong>. Esses anúncios ajudam a cobrir os custos de infraestrutura, hospedagem e manutenção do projeto, permitindo que continuemos produzindo conteúdo e ferramentas gratuitas.</p>
+    <p>Utilizamos cookies para personalizar conteúdos e anúncios, fornecer recursos de mídia social e analisar o tráfego do site. Para saber mais sobre como tratamos seus dados, consulte a nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+
+    <!-- SEÇÃO OBRIGATÓRIA PELO ADSENSE: CONTATO -->
+    <h2 class="section-heading">Contato</h2>
+    <p>Tem alguma dúvida, sugestão de pauta, encontrou algum erro ou deseja falar conosco? Estamos sempre abertos a feedbacks para melhorar o nosso portal.</p>
+    <p>Você pode entrar em contato diretamente através do nosso e-mail de suporte: <a href="mailto:daniel.constem@gmail.com">daniel.constem@gmail.com</a></p>
 
     <div class="about-footer">
       <p>Pronto para simplificar sua rotina?</p>
-      <a href="/" class="about-cta">Explorar nossas ferramentas</a>
+      <a href="/blogs" class="about-cta">Acessar a Central de Blogs &rarr;</a>
     </div>
   </div>
 </LayoutDinamico>
