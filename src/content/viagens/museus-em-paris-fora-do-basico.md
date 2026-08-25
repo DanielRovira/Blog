@@ -44,4 +44,4 @@ Situado às margens do **Rio Sena**, na ponta do **Jardin des Tuileries**, este 
 
 Quer otimizar cada minuto da sua viagem e economizar tempo e dinheiro em Paris? Conheça o **Guia Paris Sem Pegadinhas**: um e-book completo com roteiros inteligentes, dicas de transporte, restaurantes frequentados por locais e atrativos fora do radar.
 
-[Garanta seu exemplar do Guia Paris Sem Pegadinhas aqui](/produto/guia-paris-sem-pegadinhas)
+[Garanta seu exemplar do Guia Paris Sem Pegadinhas aqui](#)

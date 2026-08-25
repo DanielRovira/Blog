@@ -58,4 +58,4 @@ Encerre sua viagem com chave de ouro explorando a opulência da realeza francesa
 
 ## O Próximo Passo para a sua Viagem
 
-Se você quer economizar tempo e dinheiro em cada detalhe da sua viagem sem precisar pesquisar durante semanas, conheça o [Guia Completo da Europa Econômica](/produto): um manual prático com planilhas de gastos, roteiros detalhados para 10 capitais e dicas de ouro para evitar pegas-turistas.
+Se você quer economizar tempo e dinheiro em cada detalhe da sua viagem sem precisar pesquisar durante semanas, conheça o [Guia Completo da Europa Econômica](#): um manual prático com planilhas de gastos, roteiros detalhados para 10 capitais e dicas de ouro para evitar pegas-turistas.

@@ -50,6 +50,6 @@ Localizada a poucos quilômetros de Étretat, **Yport** é uma vila de pescadore
 
 ## O Próximo Passo para a Sua Viagem Perfeita
 
-Se você gostou de descobrir estes recantos secretos e quer planejar cada detalhe de sua viagem pela França sem perder tempo nem dinheiro, conheça o [Guia de Viagem Normandia e Bretanha](/produto): um roteiro completo com mapas, indicações de hotéis charmosos e restaurantes locais imperdíveis.
+Se você gostou de descobrir estes recantos secretos e quer planejar cada detalhe de sua viagem pela França sem perder tempo nem dinheiro, conheça o [Guia de Viagem Normandia e Bretanha](#): um roteiro completo com mapas, indicações de hotéis charmosos e restaurantes locais imperdíveis.
 
 [Garanta seu Guia Completo agora mesmo e viaje com segurança!](#)
