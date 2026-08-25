@@ -16,6 +16,8 @@ const headerBg = isDefault ? 'white' : dadosNicho.color;
 const activeColor = isDefault ? 'var(--accent)' : 'white';
 const brandName = isDefault ? SITE_TITLE : dadosNicho.title;
 const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
+const linksPrincipais = dadosNicho.links.filter((link) => link.principal);
+const linksDropdown = dadosNicho.links.filter((link) => !link.principal);
 ---
 
 <header style={`--header-bg: ${headerBg}; --header-text: ${isDefault ? 'var(--black)' : 'white'}; --header-active: ${activeColor};`}>
@@ -23,9 +25,27 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 		<h2><a href={brandUrl}>{brandName}</a></h2>
 		
 		<div class="internal-links">
-			{dadosNicho.links.map((link) => (
-				<HeaderLink href={link.url}>{link.label}</HeaderLink>
-			))}
+			{isDefault ? (
+				dadosNicho.links.map((link) => (
+					<HeaderLink href={link.url}>{link.label}</HeaderLink>
+				))
+			) : (
+				<>
+					<div class="category-links">
+						{linksPrincipais.map((link) => (
+							<HeaderLink href={link.url} class="category-header-link" data-category-link>{link.label}</HeaderLink>
+						))}
+					</div>
+					{linksDropdown.length > 0 && <div class="dropdown category-dropdown">
+						<span class="dropbtn category-dropdown-button" data-category-toggle>Mais categorias</span>
+						<div class="dropdown-content category-dropdown-content">
+							{linksDropdown.map((link) => (
+								<a href={link.url} data-category-link>{link.label}</a>
+							))}
+						</div>
+					</div>}
+				</>
+			)}
 			{isDefault && (
 			    <div class="dropdown">
 			    	<HeaderLink href="/blogs" class="dropbtn">Blogs ▾</HeaderLink>
@@ -46,7 +66,7 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 	const currentPath = window.location.pathname.replace(/\/$/, '');
 	const currentCategory = new URLSearchParams(window.location.search).get('category');
 
-	document.querySelectorAll('.internal-links > a').forEach((link) => {
+	document.querySelectorAll('[data-category-link]').forEach((link) => {
 		const anchor = link as HTMLAnchorElement;
 		const linkUrl = new URL(anchor.href, window.location.origin);
 		const linkPath = linkUrl.pathname.replace(/\/$/, '');
@@ -54,6 +74,14 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 		const isActive = linkPath === currentPath && linkCategory === currentCategory;
 
 		anchor.classList.toggle('active', isActive);
+
+		if (isActive && link.closest('.category-dropdown-content')) {
+			const toggle = document.querySelector('[data-category-toggle]');
+			if (toggle) {
+				toggle.textContent = `Mais: ${anchor.textContent}`;
+				toggle.classList.add('active');
+			}
+		}
 	});
 </script>
 <style>
@@ -87,8 +115,20 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
+	.category-dropdown-button {
+		display: inline-block;
+		padding: 1em 0.5em;
+		color: var(--header-text);
+		border-bottom: 4px solid transparent;
+		white-space: nowrap;
+		cursor: default;
+	}
 	nav a.active {
 		text-decoration: none;
+		border-bottom-color: var(--header-active);
+	}
+	.category-dropdown-button.active {
+		font-weight: bolder;
 		border-bottom-color: var(--header-active);
 	}
 	
@@ -108,7 +148,17 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 		justify-content: flex-end;
 		margin-left: auto;
 	}
-    
+
+	.category-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+
+	.internal-links .category-dropdown {
+		display: inline-block;
+	}
+
 	.dropdown {
 		position: relative;
 		display: inline-block;
@@ -118,10 +168,20 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 	.dropdown:hover .dropbtn {
 		background-color: #f1f1f1;
 	}
+
+	.category-dropdown:hover .dropbtn {
+		background-color: #ffffff50;
+	}
+
+	.category-dropdown-button::after {
+		content: "\25BE";
+		margin-left: 0.35em;
+	}
 	
 	.dropdown-content {
 		display: none;
 		position: absolute;
+		top: 100%;
 		background-color: white; /* Always white so links are legible */
 		min-width: min(200px, calc(100vw - 2rem));
         width: max-content;
@@ -160,6 +220,9 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 			gap: 0.25rem;
 		}
 		nav a {
+			padding: 0.5rem 0.35rem;
+		}
+		.category-dropdown-button {
 			padding: 0.5rem 0.35rem;
 		}
 		.social-links {
