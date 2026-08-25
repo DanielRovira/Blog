@@ -1,6 +1,7 @@
 ---
 title: "Frango Xadrez com Legumes"
 description: "Uma versão leve e colorida do frango xadrez, com pimentões, amendoim e molho agridoce feito em casa."
+category: "almoco-e-jantar"
 ---
 
 Este prato fica pronto em uma panela e combina proteína, legumes crocantes e um molho cheio de sabor. Sirva com arroz branco ou integral.

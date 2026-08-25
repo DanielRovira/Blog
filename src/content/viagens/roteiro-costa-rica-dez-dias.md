@@ -1,6 +1,7 @@
 ---
 title: "Costa Rica em 10 Dias: Vulcão, Floresta e Pacífico"
 description: "Um roteiro de dez dias pela Costa Rica com Arenal, Monteverde e litoral do Pacífico, equilibrando natureza, aventura e deslocamentos."
+category: "america-central-e-caribe"
 ---
 
 A Costa Rica é compacta no mapa, mas estradas sinuosas tornam os trajetos mais longos do que parecem. O roteiro abaixo limita as trocas de base e combina vulcão, floresta nublada e praia.

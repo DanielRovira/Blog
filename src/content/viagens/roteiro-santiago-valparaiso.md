@@ -1,6 +1,7 @@
 ---
 title: "Chile em 5 Dias: Santiago, Valparaíso e Vinícolas"
 description: "Um roteiro de cinco dias pelo Chile combinando Santiago, a costa de Valparaíso e uma degustação nos vales próximos à capital."
+category: "america-do-sul"
 ---
 
 Santiago funciona muito bem como base para uma primeira viagem ao Chile. A cidade combina museus, bairros agradáveis e montanhas no horizonte, enquanto Valparaíso acrescenta arte e mar.

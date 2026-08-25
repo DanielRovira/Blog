@@ -1,6 +1,7 @@
 ---
 title: "Serra Gaúcha em 4 Dias: Gramado, Canela e Bento Gonçalves"
 description: "Um roteiro de quatro dias pela Serra Gaúcha combinando parques, arquitetura, vinícolas e gastronomia regional."
+category: "brasil"
 ---
 
 A Serra Gaúcha permite uma viagem curta com experiências bem diferentes. Gramado e Canela concentram parques e restaurantes, enquanto Bento Gonçalves oferece vinícolas e paisagens de vale.

@@ -1,6 +1,7 @@
 ---
 title: "Roteiro pela Andaluzia em 6 Dias: Sevilha, Córdoba e Granada"
 description: "Conheça o melhor da Andaluzia em seis dias, com um roteiro eficiente entre palácios, pátios floridos, tapas e cidades históricas."
+category: "europa"
 ---
 
 A Andaluzia concentra uma das viagens mais bonitas da Espanha em uma área relativamente fácil de percorrer. Sevilha, Córdoba e Granada têm identidades próprias, mas podem ser conectadas de trem sem trocar de hotel todos os dias.

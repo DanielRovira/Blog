@@ -1,6 +1,7 @@
 ---
 title: "Panqueca de Aveia e Banana com Canela"
 description: "Panquecas macias com apenas quatro ingredientes, sem farinha de trigo e prontas em 15 minutos."
+category: "cafe-da-manha"
 ---
 
 Esta panqueca é uma opção prática para o café da manhã ou para o lanche da tarde. A banana madura adoça naturalmente a massa, enquanto a aveia dá estrutura e saciedade.

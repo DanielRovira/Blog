@@ -1,6 +1,7 @@
 ---
 title: "Pão de Frigideira com Iogurte"
 description: "Um pão rápido, macio e sem fermentação, feito na frigideira com ingredientes que você provavelmente já tem em casa."
+category: "cafe-da-manha"
 ---
 
 Quando falta pão em casa, esta receita resolve o café da manhã em poucos minutos. O iogurte dá maciez à massa, e o preparo em fogo baixo garante que o centro cozinhe sem queimar.

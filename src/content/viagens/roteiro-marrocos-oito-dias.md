@@ -1,6 +1,7 @@
 ---
 title: "Marrocos em 8 Dias: Marrakech, Fez e Deserto"
 description: "Um roteiro de oito dias pelo Marrocos com medinas, palácios, paisagens do Atlas e uma noite no deserto."
+category: "asia-e-africa"
 ---
 
 O Marrocos é intenso em cores, aromas e deslocamentos. A rota abaixo começa e termina em Marrakech, com paradas intermediárias para não transformar a viagem em longas horas seguidas de estrada.

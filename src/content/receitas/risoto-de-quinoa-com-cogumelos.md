@@ -1,6 +1,7 @@
 ---
 title: "Risoto de Quinoa com Cogumelos"
 description: "Uma versão leve e cremosa do risoto, feita com quinoa, cogumelos e caldo de legumes em cerca de 30 minutos."
+category: "almoco-e-jantar"
 ---
 
 A quinoa cozinha mais rápido que o arroz arbóreo e mantém uma textura agradável quando preparada com calma. Os cogumelos trazem sabor profundo, enquanto o parmesão finaliza o prato sem pesar.

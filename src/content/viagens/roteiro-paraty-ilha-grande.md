@@ -1,6 +1,7 @@
 ---
 title: "Paraty e Ilha Grande em 5 Dias: Centro Histórico e Mar"
 description: "Um roteiro de cinco dias entre Paraty e Ilha Grande com passeios de barco, praias, trilhas e dicas para organizar os transfers."
+category: "brasil"
 ---
 
 Paraty e Ilha Grande combinam história e natureza em uma viagem de ritmo tranquilo. Reserve tempo para as estradas e barcos: a distância no mapa não representa o tempo real de deslocamento.

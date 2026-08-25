@@ -1,6 +1,7 @@
 ---
 title: "Lasanha de Abobrinha com Ricota"
 description: "Uma lasanha leve sem massa, feita com lâminas de abobrinha, ricota temperada e molho de tomate."
+category: "almoco-e-jantar"
 ---
 
 As lâminas de abobrinha substituem a massa e deixam o prato mais leve. O cuidado principal é retirar parte da água do vegetal antes da montagem.

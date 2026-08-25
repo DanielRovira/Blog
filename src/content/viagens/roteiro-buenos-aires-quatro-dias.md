@@ -1,6 +1,7 @@
 ---
 title: "Buenos Aires em 4 Dias: Roteiro de Bairros, Cultura e Gastronomia"
 description: "Descubra Buenos Aires em quatro dias com um roteiro organizado por bairros, incluindo cafés, museus, parques, tango e os melhores passeios a pé."
+category: "america-do-sul"
 ---
 
 Buenos Aires fica ainda melhor quando explorada por bairros. Em vez de cruzar a cidade várias vezes, este roteiro agrupa atrações próximas e deixa as noites abertas para experimentar a cena gastronômica e cultural porteña.

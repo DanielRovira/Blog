@@ -1,6 +1,7 @@
 ---
 title: "Cinque Terre em 4 Dias: Vilarejos e Trilhas na Ligúria"
 description: "Um roteiro de quatro dias por Cinque Terre com base prática, trem regional, trilhas e cuidados para viajar com mais tranquilidade."
+category: "europa"
 ---
 
 Cinque Terre reúne cinco vilarejos coloridos em uma costa dramática. A melhor maneira de conhecer a região é usar o trem e escolher uma única base, em vez de trocar de hospedagem a cada noite.

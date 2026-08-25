@@ -1,6 +1,7 @@
 ---
 title: "Canadá Francês em 7 Dias: Montreal e Quebec"
 description: "Um roteiro de sete dias pelo Canadá francófono com bairros históricos, mercados, parques e uma escapada para Mont-Tremblant."
+category: "america-do-norte"
 ---
 
 Montreal e Quebec combinam gastronomia, arquitetura e natureza. O roteiro funciona em qualquer estação, mas as atividades ao ar livre mudam bastante entre verão e inverno.

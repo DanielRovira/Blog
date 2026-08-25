@@ -1,6 +1,7 @@
 ---
 title: "Sopa Cremosa de Abóbora com Gengibre"
 description: "Uma sopa aconchegante, leve e nutritiva, pronta em 40 minutos e perfeita para os dias frios."
+category: "almoco-e-jantar"
 ---
 
 Esta sopa de abóbora ganha sabor com gengibre, alho e páprica, sem precisar de creme de leite. O resultado é aveludado, aromático e fácil de adaptar para uma versão vegana.

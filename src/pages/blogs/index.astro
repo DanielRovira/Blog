@@ -19,6 +19,7 @@ const gridItems = nichos.map(([key, nicho]) => {
     description: nicho.description, // Aproveitei para incluir a descrição que estava faltando no seu map
     color: nicho.color,
     tagText: nicho.title,
+    category: 'all',
     // Se a imagem existir fisicamente na pasta, o Astro a exibe. Senão, ativa o fallback!
     image: temImagem ? caminhoRelativoPublic : undefined
   };

@@ -1,6 +1,7 @@
 ---
 title: "Macarrão de Abobrinha com Pesto de Manjericão"
 description: "Um prato rápido e leve, com molho pesto caseiro e abobrinha dourada, pronto em 25 minutos."
+category: "almoco-e-jantar"
 ---
 
 O segredo para o macarrão de abobrinha não ficar aguado é saltear os fios rapidamente em fogo alto. O pesto pode ser preparado enquanto a panela esquenta e também combina com massas tradicionais.

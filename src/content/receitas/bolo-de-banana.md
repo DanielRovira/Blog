@@ -1,6 +1,7 @@
 ---
 title: "Bolo de Banana Fit"
 description: "Fica pronto em apenas 20 minutos!"
+category: "cafe-da-manha"
 ---
 
 ### Ingredientes:

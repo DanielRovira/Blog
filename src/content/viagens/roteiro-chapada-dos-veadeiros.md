@@ -1,6 +1,7 @@
 ---
 title: "Chapada dos Veadeiros em 5 Dias: Cachoeiras e Cerrado"
 description: "Um roteiro de cinco dias pela Chapada dos Veadeiros com bases em Alto Paraíso e São Jorge, trilhas e cachoeiras memoráveis."
+category: "brasil"
 ---
 
 A Chapada dos Veadeiros pede preparo e respeito às distâncias. Alto Paraíso e São Jorge são boas bases para uma primeira viagem, mas as atrações ficam espalhadas e muitas exigem caminhada sob sol forte.

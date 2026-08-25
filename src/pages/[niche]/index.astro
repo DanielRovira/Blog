@@ -18,6 +18,7 @@ export function getStaticPaths() {
 
 const { niche } = Astro.params as { niche: NichoKey };
 const configNicho = configNichos[niche] || configNichos.default;
+const category = Astro.url.searchParams.get('category');
 
 const artigos = await getCollection(niche as CollectionKey);
 
@@ -30,6 +31,7 @@ const gridItems = artigos.map((article) => {
     url: `/${niche}/contents/${article.id}`,
     title: article.data.title,
     description: article.data.description,
+    category: article.data.category,
     color: configNicho.color,
     tagText: article.data.title,
     image: temImagem ? caminhoRelativoPublic : undefined
@@ -42,9 +44,25 @@ const gridItems = artigos.map((article) => {
     <h1>{configNicho.title}</h1>
     <p>{configNicho.description}</p>
   </div>
+
+  <nav class="category-tabs" aria-label="Categorias">
+    {configNicho.links.map((link) => (
+      <a href={link.url} class:list={{ active: link.url === (category ? `/${niche}?category=${category}` : `/${niche}`) }}>{link.label}</a>
+    ))}
+  </nav>
   
   <GridPosts items={gridItems} />
 </LayoutDinamico>
+
+<script>
+  const category = new URLSearchParams(window.location.search).get('category');
+  const posts = document.querySelectorAll('[data-category]');
+
+  posts.forEach((post) => {
+    const matches = !category || post.getAttribute('data-category') === category;
+    post.toggleAttribute('hidden', !matches);
+  });
+</script>
 
 <style>
   .page-intro {
@@ -55,5 +73,28 @@ const gridItems = artigos.map((article) => {
   .page-intro p {
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-tabs a {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgb(var(--gray-light));
+    border-radius: 6px;
+    color: rgb(var(--black));
+    text-decoration: none;
+  }
+
+  .category-tabs a:hover,
+  .category-tabs a.active {
+    color: white;
+    background: rgb(var(--accent));
+    border-color: rgb(var(--accent));
   }
 </style>

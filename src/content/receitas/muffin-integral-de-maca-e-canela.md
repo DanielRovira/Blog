@@ -1,6 +1,7 @@
 ---
 title: "Muffin Integral de Maçã e Canela"
 description: "Muffins fofinhos, aromáticos e com menos açúcar, perfeitos para o café da manhã ou para levar na bolsa."
+category: "lanches"
 ---
 
 A maçã ralada mantém a massa úmida e combina com a canela sem exigir cobertura. A receita rende porções individuais e pode ser preparada em uma única tigela.

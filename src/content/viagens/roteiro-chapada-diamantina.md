@@ -1,6 +1,7 @@
 ---
 title: "Chapada Diamantina em 5 Dias: Cachoeiras, Trilhas e Grutas"
 description: "Um roteiro inicial pela Chapada Diamantina com base em Lençóis, trilhas de diferentes níveis e dicas para planejar a viagem com segurança."
+category: "brasil"
 ---
 
 A Chapada Diamantina merece ser visitada sem pressa. Lençóis é uma base prática para a primeira viagem, com restaurantes, pousadas e acesso a vários passeios. O roteiro abaixo mistura atrações conhecidas e dias de caminhada moderada.

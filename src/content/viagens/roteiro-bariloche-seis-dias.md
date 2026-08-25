@@ -1,6 +1,7 @@
 ---
 title: "Bariloche em 6 Dias: Lagos, Montanhas e Chocolate"
 description: "Um roteiro de seis dias em Bariloche com Circuito Chico, Cerro Catedral, lagos, trilhas e gastronomia argentina."
+category: "america-do-sul"
 ---
 
 Bariloche muda completamente conforme a estação. O verão favorece trilhas e navegação; o inverno concentra a viagem na neve. A programação abaixo deixa espaços para adaptar o roteiro ao clima.

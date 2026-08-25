@@ -1,6 +1,7 @@
 ---
 title: "Como Montar Mala de Mão para o Inverno Europeu (Apenas 10kg)"
 description: "Aprenda a fazer uma mala de mão para o inverno na Europa sem passar frio ou pagar excesso de bagagem. Lista prática e método de camadas."
+category: "europa"
 ---
 
 Viajar para a Europa no inverno com apenas uma mala de mão de 10kg não exige mágica, exige técnica. O segredo é abandonar peças volumosas e focar em tecidos tecnológicos utilizando o **sistema de camadas**. Abaixo, você verá exatamente o que levar e como organizar o espaço interno sem passar frio.

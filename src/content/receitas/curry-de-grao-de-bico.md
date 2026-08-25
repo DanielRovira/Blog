@@ -1,6 +1,7 @@
 ---
 title: "Curry de Grão-de-Bico com Leite de Coco"
 description: "Um curry vegetariano cremoso e aromático, feito em uma panela e pronto em cerca de 30 minutos."
+category: "almoco-e-jantar"
 ---
 
 Este curry é uma ótima refeição sem carne: o grão-de-bico dá consistência, os tomates equilibram o leite de coco e as especiarias aquecem o prato.

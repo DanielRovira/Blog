@@ -1,6 +1,7 @@
 ---
 title: "Frango Cremoso com Legumes em Uma Panela"
 description: "Uma receita saudável, prática e completa para o jantar, pronta em cerca de 35 minutos e com poucos utensílios."
+category: "almoco-e-jantar"
 ---
 
 Este frango cremoso fica suculento, cheio de legumes e não depende de creme de leite para ganhar textura. O molho é feito com iogurte natural e um pouco da água do cozimento, resultando em um prato leve que combina com arroz integral, batata ou uma salada crocante.

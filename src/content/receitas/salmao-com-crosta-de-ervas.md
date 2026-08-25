@@ -1,6 +1,7 @@
 ---
 title: "Salmão com Crosta de Ervas e Limão"
 description: "Filés de salmão assados com crosta crocante de ervas, aveia e limão, prontos em menos de 30 minutos."
+category: "almoco-e-jantar"
 ---
 
 A crosta protege o peixe do calor e acrescenta textura sem precisar fritar. Sirva com legumes assados ou salada de folhas.

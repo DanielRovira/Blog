@@ -1,6 +1,7 @@
 ---
 title: "Salada de Macarrão Integral com Atum"
 description: "Uma salada fria completa e refrescante, com macarrão integral, atum, legumes e molho de iogurte."
+category: "almoco-e-jantar"
 ---
 
 Esta salada é ótima para dias quentes e marmitas. O molho de iogurte deixa o prato cremoso sem pesar, enquanto os legumes dão textura e frescor.

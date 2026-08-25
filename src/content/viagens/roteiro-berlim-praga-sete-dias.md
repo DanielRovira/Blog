@@ -1,6 +1,7 @@
 ---
 title: "Berlim e Praga em 7 Dias: História e Cultura Urbana"
 description: "Um roteiro de sete dias por Berlim e Praga com museus, memoriais, bairros criativos, castelos e deslocamento de ônibus ou trem."
+category: "europa"
 ---
 
 Berlim e Praga oferecem estilos muito diferentes e ficam bem conectadas. Dedique mais dias a Berlim para compreender sua história e reserve Praga para caminhar pelo centro e pelas margens do rio.

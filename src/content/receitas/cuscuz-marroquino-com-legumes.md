@@ -1,6 +1,7 @@
 ---
 title: "Cuscuz Marroquino com Legumes Assados"
 description: "Um acompanhamento colorido e aromático, pronto em 30 minutos e que também funciona como almoço vegetariano."
+category: "almoco-e-jantar"
 ---
 
 O cuscuz marroquino hidrata rapidamente e combina com quase qualquer legume. Assar os vegetais concentra o sabor e deixa o prato mais interessante sem complicar o preparo.

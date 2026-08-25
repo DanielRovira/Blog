@@ -1,6 +1,7 @@
 ---
 title: "Overnight Oats de Morango e Chia"
 description: "Café da manhã preparado na noite anterior com aveia, iogurte, chia e morangos, sem cozinhar e pronto para levar."
+category: "cafe-da-manha"
 ---
 
 Overnight oats é uma solução prática para começar o dia com um café da manhã pronto. A aveia absorve o líquido durante a noite e a chia ajuda a criar uma textura cremosa.

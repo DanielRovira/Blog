@@ -1,6 +1,7 @@
 ---
 title: "Amsterdã e Bruxelas em 5 Dias: Roteiro de Arte e Canais"
 description: "Combine Amsterdã e Bruxelas em cinco dias com um roteiro de museus, canais, arquitetura, cervejas e deslocamentos simples de trem."
+category: "europa"
 ---
 
 Amsterdã e Bruxelas ficam próximas e combinam muito bem em uma única viagem. O roteiro concentra as atrações por região e usa o trem para evitar aeroportos e longos deslocamentos.

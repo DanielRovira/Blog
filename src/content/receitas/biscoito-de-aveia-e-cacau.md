@@ -1,6 +1,7 @@
 ---
 title: "Biscoito de Aveia e Cacau com Banana"
 description: "Biscoitos macios e fáceis, feitos com poucos ingredientes e sem farinha de trigo, para um lanche caseiro."
+category: "lanches"
 ---
 
 Banana madura, aveia e cacau formam uma massa simples que não precisa de batedeira. O biscoito fica macio por dentro e pode ganhar castanhas ou gotas de chocolate amargo.

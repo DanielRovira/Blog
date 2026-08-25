@@ -13,9 +13,11 @@ export const configNichos = {
     color: "#10b981", // Verde
     description: "Descubra receitas saudáveis e deliciosas para o seu dia a dia.",
     links: [
-      { label: "Home", url: "/receitas" },
-    //   { label: "Receitas", url: "/receitas/conteudos" },
-    //   { label: "Ferramentas", url: "/receitas/ferramentas" }
+      { label: "Todos", url: "/receitas" },
+      { label: "Café da manhã", url: "/receitas?category=cafe-da-manha" },
+      { label: "Almoço e jantar", url: "/receitas?category=almoco-e-jantar" },
+      { label: "Lanches", url: "/receitas?category=lanches" },
+      { label: "Sobremesas", url: "/receitas?category=sobremesas" }
     ]
   },
   viagens: {
@@ -23,9 +25,13 @@ export const configNichos = {
     color: "#3b82f6", // Azul
     description: "Explore destinos incríveis e planeje suas próximas aventuras.",
     links: [
-      { label: "Home", url: "/viagens" },
-    //   { label: "Roteiros", url: "/viagens/conteudos" },
-    //   { label: "Checklist", url: "/viagens/checklist" }
+      { label: "Todos", url: "/viagens" },
+      { label: "Europa", url: "/viagens?category=europa" },
+      { label: "América do Sul", url: "/viagens?category=america-do-sul" },
+      { label: "Brasil", url: "/viagens?category=brasil" },
+      { label: "América Central e Caribe", url: "/viagens?category=america-central-e-caribe" },
+      { label: "Ásia e África", url: "/viagens?category=asia-e-africa" },
+      { label: "América do Norte", url: "/viagens?category=america-do-norte" }
     ]
   }
 };

@@ -1,6 +1,7 @@
 ---
 title: "Salada de Grão-de-Bico com Legumes e Molho de Limão"
 description: "Uma salada colorida e completa, rica em fibras e proteínas vegetais, ideal para marmita ou almoço leve."
+category: "almoco-e-jantar"
 ---
 
 O grão-de-bico transforma uma salada simples em uma refeição completa. O molho de limão, azeite e ervas deixa tudo fresco, enquanto os legumes acrescentam crocância e cor.

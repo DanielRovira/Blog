@@ -1,6 +1,7 @@
 ---
 title: "Japão em 10 Dias: Tóquio, Quioto e Osaka"
 description: "Um primeiro roteiro pelo Japão em dez dias, com bairros de Tóquio, templos de Quioto e gastronomia de Osaka."
+category: "asia-e-africa"
 ---
 
 Dez dias permitem conhecer três cidades essenciais do Japão sem trocar de hotel todos os dias. A ordem abaixo começa com o impacto de Tóquio e termina em Osaka, com o trem conectando o roteiro.

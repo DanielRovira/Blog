@@ -1,6 +1,7 @@
 ---
 title: "Granola Caseira sem Açúcar Refinado"
 description: "Uma granola crocante feita no forno com aveia, castanhas e frutas secas, sem excesso de açúcar e pronta em 30 minutos."
+category: "cafe-da-manha"
 ---
 
 Preparar granola em casa permite controlar a quantidade de açúcar e escolher os ingredientes que você realmente gosta. O ponto certo é obtido no forno baixo e com uma mistura bem espalhada na assadeira.

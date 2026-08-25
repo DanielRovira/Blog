@@ -1,6 +1,7 @@
 ---
 title: "Melhores Praias na Normandia Além de D-Day: Falésias e Vilarejos Secretos"
 description: "Descubra as praias mais bonitas e isoladas da Normandia, longe do turismo de massa, com falésias impressionantes e vilarejos secretos."
+category: "europa"
 ---
 
 ## Introdução: O Lado Oculto da Costa Normanda

@@ -1,6 +1,7 @@
 ---
 title: "Maragogi e Porto de Galinhas em 5 Dias: Piscinas Naturais"
 description: "Um roteiro de cinco dias pelo litoral de Pernambuco com praias, piscinas naturais, jangadas e planejamento de marés."
+category: "brasil"
 ---
 
 Maragogi e Porto de Galinhas têm águas claras e passeios dependentes da maré. A experiência melhora muito quando os horários das piscinas naturais são conferidos antes de reservar hospedagem e transporte.

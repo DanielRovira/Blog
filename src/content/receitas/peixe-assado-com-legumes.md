@@ -1,6 +1,7 @@
 ---
 title: "Peixe Assado com Legumes e Ervas"
 description: "Filés macios assados em uma única travessa com legumes, limão e ervas, para um jantar leve e sem sujeira."
+category: "almoco-e-jantar"
 ---
 
 Com poucos ingredientes e uma única assadeira, você prepara uma refeição equilibrada em pouco tempo. Tilápia, pescada ou linguado funcionam bem nesta receita.

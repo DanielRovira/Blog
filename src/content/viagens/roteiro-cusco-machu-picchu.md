@@ -1,6 +1,7 @@
 ---
 title: "Peru em 7 Dias: Cusco, Vale Sagrado e Machu Picchu"
 description: "Um roteiro de sete dias pelo Peru com aclimatação em Cusco, Vale Sagrado e visita planejada a Machu Picchu."
+category: "america-do-sul"
 ---
 
 A altitude é o ponto mais importante ao planejar esta viagem. Em vez de correr para Machu Picchu no primeiro dia, reserve tempo para o corpo se adaptar e mantenha a programação flexível.

@@ -1,6 +1,7 @@
 ---
 title: "Salada de Quinoa com Legumes e Hortelã"
 description: "Uma salada fresca e completa com quinoa, legumes crocantes e molho cítrico, ótima para dias quentes."
+category: "almoco-e-jantar"
 ---
 
 A quinoa pode ser preparada com antecedência e vira a base de uma salada prática. O molho de limão equilibra os legumes e a hortelã traz frescor.

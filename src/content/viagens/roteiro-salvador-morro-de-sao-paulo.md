@@ -1,6 +1,7 @@
 ---
 title: "Salvador e Morro de São Paulo em 5 Dias"
 description: "Um roteiro de cinco dias pela Bahia combinando o centro histórico de Salvador, praias, cultura e o ritmo tranquilo de Morro de São Paulo."
+category: "brasil"
 ---
 
 Salvador e Morro de São Paulo formam uma viagem equilibrada entre cultura e praia. O ideal é conhecer Salvador primeiro e deixar a ilha para os últimos dias, quando o ritmo desacelera.

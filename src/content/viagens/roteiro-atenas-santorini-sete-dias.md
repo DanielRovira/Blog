@@ -1,6 +1,7 @@
 ---
 title: "Grécia em 7 Dias: Atenas e Santorini"
 description: "Um roteiro de sete dias na Grécia combinando a história de Atenas com as vilas, praias e pores do sol de Santorini."
+category: "europa"
 ---
 
 Atenas e Santorini formam uma primeira viagem equilibrada à Grécia. Faça a parte histórica antes da ilha e confira horários de ferry ou voo com margem para alterações climáticas.

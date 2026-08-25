@@ -1,6 +1,8 @@
 ---
 title: "Sopa de Lentilha com Legumes"
 description: "Uma sopa nutritiva e econômica, com lentilha, cenoura e batata, ideal para aquecer o jantar."
+category: "almoco-e-jantar"
+category: "almoco-e-jantar"
 ---
 
 A lentilha cozinha mais rápido que muitos grãos e cria um caldo encorpado sem precisar bater. Faça uma panela grande e congele porções para os dias corridos.

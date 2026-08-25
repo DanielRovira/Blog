@@ -1,6 +1,7 @@
 ---
 title: "Jericoacoara em 5 Dias: Lagoas, Dunas e Pôr do Sol"
 description: "Um roteiro de cinco dias em Jericoacoara com lagoas, praias, passeios de buggy e dicas para organizar transfer e marés."
+category: "brasil"
 ---
 
 Jericoacoara funciona melhor com dias sem pressa. O acesso é mais demorado, mas a vila e as lagoas recompensam quem organiza os transfers e respeita o ritmo das marés e dos ventos.

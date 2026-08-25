@@ -1,6 +1,7 @@
 ---
 title: "Portugal de Trem: Roteiro de 7 Dias entre Lisboa e Porto"
 description: "Um roteiro prático para conhecer Lisboa, Sintra, Coimbra e Porto de trem, com ordem inteligente, tempo de viagem e dicas para gastar menos."
+category: "europa"
 ---
 
 Portugal é um dos melhores destinos da Europa para uma primeira viagem sem carro. As cidades mais visitadas estão ligadas por trem, os centros históricos são caminháveis e cada parada tem uma personalidade diferente. Em sete dias, dá para combinar mirantes, palácios, comida boa e paisagens do Douro sem transformar as férias em uma corrida.

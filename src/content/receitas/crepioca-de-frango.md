@@ -1,6 +1,7 @@
 ---
 title: "Crepioca Recheada com Frango e Tomate"
 description: "Uma crepioca proteica, rápida e saborosa para o café da manhã, almoço leve ou jantar em até 20 minutos."
+category: "cafe-da-manha"
 ---
 
 A crepioca junta a praticidade da tapioca com a estrutura do ovo. Com frango desfiado, tomate e queijo, vira uma refeição completa e fácil de levar.

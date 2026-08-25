@@ -1,6 +1,7 @@
 ---
 title: "Berinjela Recheada com Tomate e Queijo"
 description: "Uma receita vegetariana assada, saborosa e prática, com berinjela macia, molho de tomate e queijo gratinado."
+category: "almoco-e-jantar"
 ---
 
 A berinjela recheada é uma maneira simples de colocar mais vegetais no prato. Pré-assar as metades reduz o tempo no forno e ajuda a polpa a ficar macia sem desmanchar a casca.

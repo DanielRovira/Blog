@@ -1,6 +1,7 @@
 ---
 title: "Florianópolis em 7 Dias: Praias, Trilhas e Centro Histórico"
 description: "Um roteiro completo por Florianópolis para combinar praias do norte, leste e sul com trilhas, gastronomia e dias de descanso."
+category: "brasil"
 ---
 
 Florianópolis é grande o bastante para pedir organização. As praias ficam espalhadas pela ilha, e atravessar a cidade nos horários de pico pode consumir boa parte do dia. O segredo é separar o roteiro por regiões e reservar momentos para descansar.

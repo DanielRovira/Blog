@@ -1,6 +1,7 @@
 ---
 title: "Escondidinho de Batata-Doce com Carne Moída"
 description: "Um escondidinho reconfortante com purê de batata-doce e recheio bem temperado, ideal para preparar e congelar."
+category: "almoco-e-jantar"
 ---
 
 O purê de batata-doce combina com o recheio de carne e cria uma refeição completa. Monte em uma travessa grande ou em potes individuais para facilitar a semana.

@@ -1,6 +1,7 @@
 ---
 title: "Amazônia a partir de Manaus em 5 Dias: Floresta e Rio"
 description: "Um roteiro de cinco dias em Manaus e na Amazônia com centro histórico, encontro das águas e hospedagem na floresta."
+category: "brasil"
 ---
 
 Uma viagem à Amazônia pede escuta e flexibilidade. O nível dos rios, o clima e a operação dos barcos alteram os passeios, por isso o roteiro deve ter margem e ser feito com operadores responsáveis.

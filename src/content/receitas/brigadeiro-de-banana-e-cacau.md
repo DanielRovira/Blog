@@ -1,6 +1,7 @@
 ---
 title: "Brigadeiro de Banana e Cacau"
 description: "Um docinho rápido de panela feito com banana, cacau e leite em pó, com sabor intenso e menos açúcar."
+category: "sobremesas"
 ---
 
 Este brigadeiro não tenta imitar perfeitamente o tradicional: ele tem sabor de banana e uma textura cremosa deliciosa. É uma alternativa rápida para matar a vontade de doce com ingredientes simples.

@@ -1,6 +1,7 @@
 ---
 title: "Cartagena e San Andrés em 7 Dias: História e Caribe"
 description: "Combine o centro histórico de Cartagena com as praias de San Andrés em um roteiro de sete dias, incluindo logística e dias de descanso."
+category: "america-central-e-caribe"
 ---
 
 Cartagena entrega história, arquitetura e vida noturna; San Andrés complementa a viagem com mar transparente e passeios de barco. A combinação pede um voo interno e uma margem de segurança entre os deslocamentos.

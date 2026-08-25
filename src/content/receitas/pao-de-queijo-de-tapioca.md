@@ -1,6 +1,7 @@
 ---
 title: "Pão de Queijo de Tapioca na Frigideira"
 description: "Um pão de queijo rápido, dourado e feito na frigideira com tapioca, ovo e queijo."
+category: "cafe-da-manha"
 ---
 
 Com poucos ingredientes, esta receita resolve o café da manhã sem ligar o forno. O fogo baixo é essencial para o queijo derreter antes de a base dourar demais.

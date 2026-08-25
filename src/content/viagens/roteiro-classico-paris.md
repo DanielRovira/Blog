@@ -1,6 +1,7 @@
 ---
 title: "Roteiro Clássico para Paris: O Guia Definitivo de 4 Dias"
 description: "Descubra o melhor de Paris em 4 dias com um roteiro prático, otimizado e direto ao ponto para otimizar sua viagem."
+category: "europa"
 ---
 
 ## Introdução

@@ -1,6 +1,7 @@
 ---
 title: "Bolo de Cenoura Integral com Cobertura de Cacau"
 description: "Um bolo macio de cenoura e aveia com cobertura simples de cacau, perfeito para o café da tarde."
+category: "lanches"
 ---
 
 A cenoura deixa a massa úmida e naturalmente adocicada. Nesta versão, parte da farinha é integral e a cobertura fica pronta na panela em poucos minutos.

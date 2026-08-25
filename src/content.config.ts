@@ -6,6 +6,7 @@ const receitasCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.string(),
     capa: z.string().optional()
   })
 });
@@ -15,8 +16,9 @@ const viagensCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    destino: z.string().optional(),
-    capa: z.string().optional()
+    category: z.string(),
+    capa: z.string().optional(),
+    destino: z.string().optional()
   })
 });
 

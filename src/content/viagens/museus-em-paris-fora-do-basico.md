@@ -1,6 +1,7 @@
 ---
 title: "Museus em Paris para fugir do básico: Além do Louvre e d'Orsay"
 description: "Descubra museus secretos, charmosos e vazios em Paris para fugir das filas e multidões do Louvre e d'Orsay. Roteiro alternativo imperdível."
+category: "europa"
 ---
 
 Paris vai muito além das filas intermináveis da **Mona Lisa** e dos impressionistas lotados do **Musée d'Orsay**. Se você quer uma experiência cultural autêntica, sem esbarrar em dezenas de turistas a cada passo, precisa conhecer os **museus secretos e charmosos** da capital francesa. 

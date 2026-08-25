@@ -1,6 +1,7 @@
 ---
 title: "Arroz Integral com Legumes e Ervas"
 description: "Um arroz integral soltinho e colorido para acompanhar carnes, ovos ou virar uma refeição vegetariana."
+category: "almoco-e-jantar"
 ---
 
 O arroz integral fica mais saboroso quando é refogado antes de receber a água. Os legumes entram no final para manter cor, textura e nutrientes.

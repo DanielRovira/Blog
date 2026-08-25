@@ -1,6 +1,7 @@
 ---
 title: "Omelete de Forno com Vegetais"
 description: "Uma omelete alta e colorida, feita sem fritura e ótima para aproveitar os legumes que já estão na geladeira."
+category: "almoco-e-jantar"
 ---
 
 A omelete de forno resolve o jantar em uma travessa e continua saborosa no dia seguinte. Use uma forma pequena para deixá-la mais alta e asse até firmar, sem ressecar.

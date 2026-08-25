@@ -1,6 +1,7 @@
 ---
 title: "Mousse de Manga com Iogurte Natural"
 description: "Uma sobremesa cremosa e refrescante de manga, iogurte e limão, sem precisar de forno."
+category: "sobremesas"
 ---
 
 Mangas maduras dão doçura e cor a esta sobremesa leve. O limão evita que o sabor fique enjoativo, e o iogurte acrescenta cremosidade.

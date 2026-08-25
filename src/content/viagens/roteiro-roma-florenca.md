@@ -1,6 +1,7 @@
 ---
 title: "Roma e Florença em 6 Dias: Roteiro de Arte e História"
 description: "Um roteiro equilibrado por Roma e Florença para conhecer ruínas, museus, praças e a culinária italiana sem transformar a viagem em uma maratona."
+category: "europa"
 ---
 
 Roma e Florença formam uma combinação excelente para uma primeira viagem à Itália. O trem de alta velocidade reduz o deslocamento entre as duas cidades, enquanto o roteiro alterna grandes atrações com períodos livres para caminhar e comer bem.
