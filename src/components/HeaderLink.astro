@@ -6,14 +6,17 @@ type Props = HTMLAttributes<'a'>;
 const { href, class: className, ...props } = Astro.props;
 const normalizePath = (path: string) => path.length > 1 ? path.replace(/\/$/, '') : path;
 const baseUrl = import.meta.env.BASE_URL;
+const currentCategory = Astro.url.searchParams.get('category');
+const linkUrl = new URL(typeof href === 'string' ? href : '', Astro.url);
 const pathname = normalizePath(
 	Astro.url.pathname.startsWith(baseUrl)
 		? `/${Astro.url.pathname.slice(baseUrl.length)}`
 		: Astro.url.pathname
 );
-const linkPath = normalizePath(typeof href === 'string' ? href : '');
+const linkPath = normalizePath(linkUrl.pathname);
 const isNestedRoute = linkPath !== '/' && linkPath.split('/').filter(Boolean).length > 1;
-const isActive = linkPath === pathname || (isNestedRoute && pathname.startsWith(`${linkPath}/`));
+const isSameCategory = linkUrl.searchParams.get('category') === currentCategory;
+const isActive = isSameCategory && (linkPath === pathname || (isNestedRoute && pathname.startsWith(`${linkPath}/`)));
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>

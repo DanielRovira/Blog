@@ -42,6 +42,21 @@ const brandUrl = isDefault ? '/' : (dadosNicho.links[0]?.url || `/${nicho}`);
 		</div>
 	</nav>
 </header>
+
+<script>
+	const currentPath = window.location.pathname.replace(/\/$/, '');
+	const currentCategory = new URLSearchParams(window.location.search).get('category');
+
+	document.querySelectorAll('.internal-links > a').forEach((link) => {
+		const anchor = link as HTMLAnchorElement;
+		const linkUrl = new URL(anchor.href, window.location.origin);
+		const linkPath = linkUrl.pathname.replace(/\/$/, '');
+		const linkCategory = linkUrl.searchParams.get('category');
+		const isActive = linkPath === currentPath && linkCategory === currentCategory;
+
+		anchor.classList.toggle('active', isActive);
+	});
+</script>
 <style>
 	header {
 		margin: 0;

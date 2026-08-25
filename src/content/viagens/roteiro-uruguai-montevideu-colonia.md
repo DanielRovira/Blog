@@ -2,7 +2,6 @@
 title: "Uruguai em 5 Dias: Montevidéu, Colônia e Punta del Este"
 description: "Um roteiro tranquilo de cinco dias pelo Uruguai com centro histórico, rambla, vinícolas, praias e deslocamentos fáceis."
 category: "america-do-sul"
-category: "america-do-sul"
 ---
 
 O Uruguai é perfeito para uma viagem sem pressa. Montevidéu funciona como base cultural, Colônia entrega um centro histórico charmoso e Punta del Este acrescenta paisagens litorâneas.
