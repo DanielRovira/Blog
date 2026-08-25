@@ -1,0 +1,103 @@
+---
+import { configNichos } from '../../config/nichos.js';
+
+export interface Props {
+  nicho: keyof typeof configNichos;
+}
+
+const { nicho } = Astro.props;
+const oferta = configNichos[nicho]?.infoproduto;
+
+if (!oferta) {
+  return;
+}
+---
+
+<aside class="product-offer" style={`--offer-color: ${configNichos[nicho].color};`} aria-label={`Oferta: ${oferta.title}`}>
+  {oferta.image && <img src={oferta.image} alt="" class="product-offer-image" />}
+  <div class="product-offer-content">
+    <p class="product-offer-eyebrow">Material recomendado</p>
+    <h2>{oferta.title}</h2>
+    <p>{oferta.description}</p>
+    <a class="product-offer-button" href={oferta.url} target="_blank" rel="noopener noreferrer">
+      {oferta.buttonLabel}
+    </a>
+  </div>
+</aside>
+
+<style>
+  .product-offer {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 3rem auto 2rem;
+    padding: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--offer-color) 28%, white);
+    border-left: 5px solid var(--offer-color);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--offer-color) 8%, white);
+  }
+
+  .product-offer-image {
+    width: 120px;
+    height: 160px;
+    flex: 0 0 120px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .product-offer-content {
+    flex: 1;
+  }
+
+  .product-offer-eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--offer-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .product-offer h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+  }
+
+  .product-offer p:not(.product-offer-eyebrow) {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .product-offer-button {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--offer-color);
+    border-radius: 4px;
+    color: white;
+    background: var(--offer-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .product-offer-button:hover {
+    filter: brightness(0.9);
+  }
+
+  @media (max-width: 480px) {
+    .product-offer {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.25rem;
+    }
+
+    .product-offer-image {
+      width: 90px;
+      height: 120px;
+      flex-basis: 120px;
+    }
+  }
+</style>

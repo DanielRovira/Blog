@@ -1,6 +1,7 @@
 ---
 import { render, getCollection, type CollectionKey } from 'astro:content';
 import LayoutDinamico from '../../../layouts/LayoutDinamico.astro';
+import OfertaInfoproduto from '../../../components/ui/OfertaInfoproduto.astro';
 import { configNichos } from '../../../config/nichos';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -57,6 +58,8 @@ const caminhoImagem = fs.existsSync(caminhoFisico) ? caminhoRelativoPublic : nul
   <hr class="article-divider" />
 
   <Content /> 
+
+  <OfertaInfoproduto nicho={niche} />
   
   <div class="article-footer">
     <a href={`/${niche}`}>&larr; Voltar</a>

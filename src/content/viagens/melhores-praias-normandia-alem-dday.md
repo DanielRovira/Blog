@@ -48,9 +48,3 @@ Localizada a poucos quilômetros de Étretat, **Yport** é uma vila de pescadore
 | **Étretat** | Seixos | Paisagens dramáticas e trilhas | Médio a Alto |
 | **Yport** | Seixos | Vila de pescadores tradicional | Baixo |
 | **Veules-les-Roses**| Areia e cascalho | Vilarejo romântico e fluvial | Baixo a Médio |
-
-## O Próximo Passo para a Sua Viagem Perfeita
-
-Se você gostou de descobrir estes recantos secretos e quer planejar cada detalhe de sua viagem pela França sem perder tempo nem dinheiro, conheça o [Guia de Viagem Normandia e Bretanha](#): um roteiro completo com mapas, indicações de hotéis charmosos e restaurantes locais imperdíveis.
-
-[Garanta seu Guia Completo agora mesmo e viaje com segurança!](#)

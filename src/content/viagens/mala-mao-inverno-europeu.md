@@ -44,7 +44,3 @@ Não jogue as roupas soltas. O espaço de uma mala de cabine (padrão 55x40x20cm
 ## Otimize o Seu Planejamento
 
 Esquecer um item essencial no inverno europeu custa caro e compromete o seu conforto. Organizar a bagagem estrategicamente e garantir que nada fique para trás é o que separa uma viagem tranquila de uma dor de cabeça com excesso de peso ou frio.
-
-Para não depender da memória e ter certeza de que sua mala está perfeitamente dimensionada para o clima e a duração da sua viagem, elimine as suposições. A nossa ferramenta calcula os itens exatos que você precisa levar, gerando listas práticas em poucos segundos.
-
-[Acesse a Planilha Automática de Checklists de Viagem e monte sua mala com precisão](#)

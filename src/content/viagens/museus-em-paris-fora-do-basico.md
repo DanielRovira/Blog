@@ -42,7 +42,3 @@ Situado às margens do **Rio Sena**, na ponta do **Jardin des Tuileries**, este 
 | **Musée de la Chasse** | Arte & Natureza | Atmosfera única e excêntrica | Marais |
 | **Musée Rodin** | Esculturas & Jardins | Jardim arborizado espetacular | 7º Arrondissement |
 | **Musée de l'Orangerie**| Impressionismo | Salas imersivas de Monet | Praça da Concórdia |
-
-Quer otimizar cada minuto da sua viagem e economizar tempo e dinheiro em Paris? Conheça o **Guia Paris Sem Pegadinhas**: um e-book completo com roteiros inteligentes, dicas de transporte, restaurantes frequentados por locais e atrativos fora do radar.
-
-[Garanta seu exemplar do Guia Paris Sem Pegadinhas aqui](#)
