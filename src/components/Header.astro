@@ -132,14 +132,6 @@ const linksDropdown = dadosNicho.links.filter((link) => !link.principal);
 		border-bottom-color: var(--header-active);
 	}
 	
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	.social-links a {
-		color: var(--header-text);
-	}
-	
 	/* Dropdown styles */
 	.internal-links {
 		display: flex;
@@ -207,37 +199,12 @@ const linksDropdown = dadosNicho.links.filter((link) => !link.principal);
 	}
 
 	@media (max-width: 720px) {
-		nav {
-			align-items: flex-start;
-			gap: 0.5rem;
-			padding: 0.5rem 0;
-		}
 		nav h2 {
 			padding: 0.5rem 0;
 		}
-		.internal-links {
-			justify-content: flex-end;
-			gap: 0.25rem;
-		}
-		nav a {
+		nav a, .category-dropdown-button {
 			padding: 0.5rem 0.35rem;
-		}
-		.category-dropdown-button {
-			padding: 0.5rem 0.35rem;
-		}
-		.social-links {
-			display: none;
 		}
 	}
 
-	@media (max-width: 520px) {
-		nav {
-			flex-direction: column;
-		}
-		.internal-links {
-			width: 100%;
-			justify-content: flex-start;
-			margin-left: 0;
-		}
-	}
 </style>
