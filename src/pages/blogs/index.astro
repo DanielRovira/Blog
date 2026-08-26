@@ -1,17 +1,19 @@
 ---
 import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
 import GridPosts from '../../components/ui/GridPosts.astro';
+import type { ImageMetadata } from 'astro';
 import { configNichos } from '../../config/nichos.js';
-import fs from 'node:fs';
-import path from 'node:path';
 
 const nichos = Object.entries(configNichos).filter(([key]) => key !== 'default');
+const capas = import.meta.glob('../../content/*/*/capa.webp', {
+  eager: true,
+  import: 'default',
+}) as Record<string, ImageMetadata>;
 
 const gridItems = nichos.map(([key, nicho]) => {
-  // Caminho físico e público dinâmico baseado na chave do nicho
-  const caminhoRelativoPublic = `/${key}/capa-nicho.jpeg`;
-  const caminhoFisico = path.join(process.cwd(), 'public', caminhoRelativoPublic);
-  const temImagem = fs.existsSync(caminhoFisico);
+  const capa = Object.entries(capas).find(([imagePath]) =>
+    imagePath.startsWith(`../../content/${key}/`),
+  )?.[1];
 
   return {
     url: `/${key}`,
@@ -20,8 +22,7 @@ const gridItems = nichos.map(([key, nicho]) => {
     color: nicho.color,
     tagText: nicho.title,
     category: 'all',
-    // Se a imagem existir fisicamente na pasta, o Astro a exibe. Senão, ativa o fallback!
-    image: temImagem ? caminhoRelativoPublic : undefined
+    image: capa
   };
 });
 ---

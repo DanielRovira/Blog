@@ -2,9 +2,8 @@
 import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
 import GridPosts from '../../components/ui/GridPosts.astro';
 import { getCollection, type CollectionKey } from 'astro:content';
+import type { ImageMetadata } from 'astro';
 import { configNichos } from '../../config/nichos';
-import fs from 'node:fs';
-import path from 'node:path';
 
 type NichoKey = keyof Omit<typeof configNichos, 'default'>;
 
@@ -21,11 +20,13 @@ const configNicho = configNichos[niche] || configNichos.default;
 const category = Astro.url.searchParams.get('category');
 
 const artigos = await getCollection(niche as CollectionKey);
+const capas = import.meta.glob('../../content/*/*/capa.webp', {
+  eager: true,
+  import: 'default',
+}) as Record<string, ImageMetadata>;
 
 const gridItems = artigos.map((article) => {
-  const caminhoRelativoPublic = `/${niche}/${article.id}/capa.jpeg`;
-  const caminhoFisico = path.join(process.cwd(), 'public', caminhoRelativoPublic);
-  const temImagem = fs.existsSync(caminhoFisico);
+  const capa = capas[`../../content/${niche}/${article.id}/capa.webp`];
 
   return {
     url: `/${niche}/contents/${article.id}`,
@@ -34,7 +35,7 @@ const gridItems = artigos.map((article) => {
     category: article.data.category,
     color: configNicho.color,
     tagText: article.data.title,
-    image: temImagem ? caminhoRelativoPublic : undefined
+    image: capa
   };
 });
 ---

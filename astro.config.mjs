@@ -8,6 +8,16 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://guiapratico.onrender.com',
 	integrations: [mdx(), sitemap()],
+	image: {
+		service: {
+			entrypoint: 'astro/assets/services/sharp',
+			config: {
+				webp: {
+					quality: 80,
+				},
+			},
+		},
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),

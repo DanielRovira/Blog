@@ -17,15 +17,15 @@ A arquitetura gira em torno de pilares modernos que eliminam a duplicação de c
 
 ```text
 /
-├── public/
-│   ├── receitas/               <-- Imagens do nicho (ex: capa-nicho.jpeg, [slug]/capa.jpeg)
-│   └── viagens/                <-- Imagens do nicho (ex: capa-nicho.jpeg, [slug]/capa.jpeg)
+├── public/                    <-- Arquivos publicos que nao passam pelo Astro
+├── scripts/
+│   └── converter_imagens_para_webp.py
 ├── src/
 │   ├── config/
 │   │   └── nichos.js           <-- Configurações globais de temas, cores e links
 │   ├── content/
-│   │   ├── receitas/           <-- Markdowns do nicho de Receitas
-│   │   └── viagens/            <-- Markdowns do nicho de Viagens
+│   │   ├── receitas/           <-- Artigos e imagens WebP de Receitas
+│   │   └── viagens/            <-- Artigos e imagens WebP de Viagens
 │   ├── layouts/
 │   │   └── LayoutDinamico.astro <-- Layout mestre responsivo aos nichos
 │   ├── pages/
@@ -88,9 +88,9 @@ export const collections = {
 
 ### Passo 3: Criar as Pastas Físicas (Conteúdo e Imagens)
 
-1. **Markdowns:** Crie a pasta `src/content/tecnologia/` e coloque seus arquivos `.md` nela.
-2. **Capa do Nicho (Opcional):** Para exibir uma imagem no card do blog, crie a pasta `public/tecnologia/` e salve uma imagem chamada `capa-nicho.jpeg`.
-3. **Capa dos Posts (Opcional):** Para cada post (ex: `meu-artigo.md`), crie uma pasta correspondente em `public/tecnologia/meu-artigo/` e salve uma imagem chamada `capa.jpeg`. *(Se não houver imagem, o sistema ativa automaticamente o fallback de cor padronizada!)*
+1. **Markdowns:** Crie uma pasta para cada artigo em `src/content/tecnologia/meu-artigo/` e salve o conteúdo como `index.md`.
+2. **Imagens do artigo (Opcional):** Salve a capa como `capa.webp` e as demais imagens como `imagem1.webp`, `imagem2.webp` etc. Use caminhos relativos no Markdown, por exemplo `![Descrição](./imagem1.webp)`.
+3. **Padronização:** Se você colocar imagens JPEG, PNG, AVIF ou outro WebP nessas pastas, use o script de conversão descrito abaixo antes de enviar as alterações para o repositório.
 
 Com essa estrutura, **nenhum arquivo de rota nova precisa ser criado**. O sistema dinâmico assume o controle de tudo instantaneamente.
 
@@ -98,8 +98,42 @@ Com essa estrutura, **nenhum arquivo de rota nova precisa ser criado**. O sistem
 
 ## 🧹 Boas Práticas e Convenções
 
-* **Convenção sobre Configuração:** As imagens dos posts e dos nichos são detectadas de forma automática no disco (`node:fs`) por meio do ID do conteúdo, mantendo os frontmatters dos Markdowns limpos apenas com `titulo` e `descricao`.
-* **Fallback Automático:** Se um post ou nicho não possuir imagem física no diretório `public`, o layout renderiza com elegância uma caixinha colorida de fallback baseada na cor configurada no `nichos.js`.
+* **Convenção sobre Configuração:** As imagens das capas são importadas de `src/content` e processadas pelo pipeline de imagens do Astro.
+* **Fallback Automático:** Se um post não possuir `capa.webp`, o layout renderiza uma caixinha colorida de fallback baseada na cor configurada no `nichos.js`.
+
+## Converter Imagens para WebP
+
+O script `scripts/converter_imagens_para_webp.py` percorre recursivamente as pastas de `src/content`, converte imagens `.jpg`, `.jpeg`, `.png`, `.avif` e `.webp` para WebP e mantém o mesmo nome do arquivo. Por segurança, ele apenas simula as alterações por padrão.
+
+Antes de aplicar, verifique a lista de conversões:
+
+```bash
+python3 scripts/converter_imagens_para_webp.py
+```
+
+Executar a conversão e remover os arquivos originais:
+
+```bash
+python3 scripts/converter_imagens_para_webp.py --apply
+```
+
+Executar a conversão mantendo os arquivos originais:
+
+```bash
+python3 scripts/converter_imagens_para_webp.py --apply --keep-originals
+```
+
+Alterar a qualidade do WebP, usando um valor entre 1 e 100:
+
+```bash
+python3 scripts/converter_imagens_para_webp.py --apply --quality 85
+```
+
+O script exige Pillow. Caso ainda não esteja instalado:
+
+```bash
+python3 -m pip install Pillow
+```
 
 ---
 

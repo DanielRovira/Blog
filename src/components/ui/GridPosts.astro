@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 export interface GridItem {
   url: string;
   title: string;
@@ -6,7 +9,7 @@ export interface GridItem {
   color?: string;
   tagText: string;
   category: string;
-  image?: string; 
+  image?: ImageMetadata;
 }
 
 export interface Props {
@@ -21,12 +24,16 @@ const { items } = Astro.props;
     items.map((item) => (
       <li data-category={item.category}>
         <a href={item.url}>
-          {/* Lógica: Se tem imagem, exibe a tag <img>. Senão, exibe a <div> colorida */}
+          {/* Se não houver capa, exibe o fallback colorido. */}
           {item.image ? (
-            <img 
+            <Image
               src={item.image} 
+              width={640}
+              height={360}
               alt={`Capa de ${item.title}`} 
               class="imagem-nicho image-cover" 
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <div class="imagem-nicho fallback-image" style={`--item-color: ${item.color || '#333'};`}>
@@ -84,11 +91,10 @@ const { items } = Astro.props;
     text-align: center;
   }
 
-  /* Nova classe específica para a tag <img> não distorcer */
   img.image-cover {
     object-fit: cover;
     border: none;
-    display: block; /* Remove o display: flex da classe original para imagens */
+    display: block;
   }
 
   .reusable-grid li a {
