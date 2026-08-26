@@ -9,6 +9,9 @@ export default defineConfig({
 	site: 'https://guiapratico.onrender.com',
 	integrations: [mdx(), sitemap()],
 	image: {
+		layout: 'constrained',
+		responsiveStyles: true,
+		breakpoints: [480, 640, 768, 1024],
 		service: {
 			entrypoint: 'astro/assets/services/sharp',
 			config: {

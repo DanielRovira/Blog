@@ -22,7 +22,7 @@ const linksDropdown = dadosNicho.links.filter((link) => !link.principal);
 
 <header style={`--header-bg: ${headerBg}; --header-text: ${isDefault ? 'var(--black)' : 'white'}; --header-active: ${activeColor};`}>
 	<nav>
-		<h2><a href={brandUrl}>{brandName}</a></h2>
+		<div class="brand-title"><a href={brandUrl}>{brandName}</a></div>
 		
 		<div class="internal-links">
 			{isDefault ? (
@@ -94,13 +94,13 @@ const linksDropdown = dadosNicho.links.filter((link) => !link.principal);
         top: 0;
 		z-index: 10;
 	}
-	h2 {
+	.brand-title {
 		margin: 0;
 		font-size: 1em;
 		line-height: 1.2;
 	}
-	h2 a,
-	h2 a.active {
+	.brand-title a,
+	.brand-title a.active {
 		text-decoration: none;
 		color: var(--header-text);
 	}

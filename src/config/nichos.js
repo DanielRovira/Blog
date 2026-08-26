@@ -19,7 +19,7 @@ export const configNichos = {
   },
   receitas: {
     title: "Receitas saudáveis",
-    color: "#10b981", // Verde
+    color: "#047857", // Verde com contraste AA para texto branco
     description: "Descubra receitas saudáveis e deliciosas para o seu dia a dia.",
     infoproduto: {
       title: "E-book Marmitas Saudáveis para a Semana",
