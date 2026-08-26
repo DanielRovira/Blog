@@ -1,6 +1,7 @@
 ---
 import LayoutDinamico from '../../layouts/LayoutDinamico.astro';
 import GridPosts from '../../components/ui/GridPosts.astro';
+import SearchBar from '../../components/Search/SearchBar.astro';
 import { getCollection, type CollectionKey } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import { configNichos } from '../../config/nichos';
@@ -49,6 +50,8 @@ const gridItems = artigos.map((article) => {
     <h1>{configNicho.title}</h1>
     <p>{configNicho.description}</p>
   </div>
+
+  <SearchBar collectionName={niche} />
 
   <nav class="category-tabs" aria-label="Categorias">
     {configNicho.links.map((link) => (

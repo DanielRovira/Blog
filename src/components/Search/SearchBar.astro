@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import Search from './Search';
+const { collectionName } = Astro.props;
+const collection = await getCollection(collectionName)
+---
+
+<div id="search">
+  <Search client:load searchList={collection} />
+</div>

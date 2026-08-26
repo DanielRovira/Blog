@@ -2,12 +2,13 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import react from "@astrojs/react";
 import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://guiapratico.onrender.com',
-	integrations: [mdx(), sitemap()],
+	integrations: [mdx(), sitemap(), react()],
 	image: {
 		layout: 'constrained',
 		responsiveStyles: true,
